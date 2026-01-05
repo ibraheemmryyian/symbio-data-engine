@@ -1,0 +1,45 @@
+# ============================================
+# SYMBIO DATA ENGINE - Dependencies
+# ============================================
+# The Library of Alexandria for Industrial Symbiosis
+# ============================================
+
+# Core Web Scraping
+scrapy>=2.11
+trafilatura>=1.6
+ftfy>=6.1
+waybackpy>=3.0
+httpx>=0.25
+beautifulsoup4>=4.12
+
+# PDF Processing
+PyPDF2>=3.0
+camelot-py[cv]>=0.11
+tabula-py>=2.7
+pytesseract>=0.3
+pdf2image>=1.16
+
+# Database
+psycopg2-binary>=2.9
+chromadb>=0.4
+sqlalchemy>=2.0
+
+# ML/AI
+sentence-transformers>=2.2
+rapidfuzz>=3.0
+tiktoken>=0.5
+
+# Utilities
+python-dotenv>=1.0
+tqdm>=4.65
+click>=8.1
+rich>=13.0
+pydantic>=2.0  # 🛡️ STRICT DATA VALIDATION
+
+# Data Processing
+pandas>=2.0
+numpy>=1.24
+
+# Async Support
+aiohttp>=3.9
+aiofiles>=23.0

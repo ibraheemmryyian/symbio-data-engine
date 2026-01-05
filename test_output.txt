@@ -1,0 +1,66 @@
+﻿
+============================================================
+python : Traceback 
+(most recent call 
+last):
+At line:1 char:1
++ python "c:\Users\I
+mrry\Desktop\symbio_
+data_engine\test_scr
+apers.py" 2 ...
++ ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo  
+            : NotS  
+  pecified: (Trac   
+ eback (most rec    
+ent call last):    
+:String) [], Re    
+moteException
+    + FullyQualifie 
+   dErrorId : Nati  
+  veCommandError
+ 
+  File "c:\Users\Imr
+ry\Desktop\symbio_da
+ta_engine\test_scrap
+ers.py", line 312, 
+in <module>
+    success = 
+run_all_tests()
+              
+^^^^^^^^^^^^^^^
+  File "c:\Users\Imr
+ry\Desktop\symbio_da
+ta_engine\test_scrap
+ers.py", line 270, 
+in run_all_tests
+    
+print("\U0001f680 
+SYMBIO DATA ENGINE 
+- SCRAPER TEST 
+SUITE")
+  File "C:\Users\Imr
+ry\AppData\Local\Pro
+grams\Python\Python3
+11\Lib\encodings\cp1
+252.py", line 19, 
+in encode
+    return codecs.ch
+armap_encode(input,s
+elf.errors,encoding_
+table)[0]
+           ^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+^^^^^^
+UnicodeEncodeError: 
+'charmap' codec 
+can't encode 
+character 
+'\U0001f680' in 
+position 0: 
+character maps to 
+<undefined>
