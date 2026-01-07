@@ -1,0 +1,25 @@
+DEBUG: Connecting to DBname='symbio_data' User='symbio' Host='localhost'
+DEBUG: Tables in DB: ['documents', 'raw_extractions', 'waste_listings', 'carbon_emissions', 'fraud_flags', 'symbiosis_exchanges', 'companies', 'pipeline_runs', 'v_pipeline_stats', 'v_material_summary', 'v_company_emissions']
+[INFO] Scanning C:\Users\Imrry\Desktop\symbio_data_engine\data\raw\eprtr\eea_t_ied-eprtr_p_2007-2023_v15_r00\User-friendly-CSV ...
+Debug: Found 16 files in directory.
+Debug: Filtered 16 CSV files.
+   [OK] Ingested (Ref Only): F1_1_Air_Releases_National.csv (0.77 MB)
+   [OK] Ingested (Ref Only): F1_2_Air_Releases_Sector.csv (3.46 MB)
+   [OK] Ingested (Ref Only): F1_3_Air_Releases_AnnexIActivity.csv (6.47 MB)
+   [OK] Ingested (Ref Only): F1_4_Air_Releases_Facilities.csv (68.94 MB)
+   [OK] Ingested (Ref Only): F2_1_Water_Releases_National.csv (0.70 MB)
+   [OK] Ingested (Ref Only): F2_2_Water_Releases_Sector.csv (2.78 MB)
+   [OK] Ingested (Ref Only): F2_3_Water_Releases_AnnexIActivity.csv (4.92 MB)
+   [OK] Ingested (Ref Only): F2_4_Water_Releases_Facilities.csv (48.01 MB)
+   [OK] Ingested (Ref Only): F3_1_Transfers_National.csv (0.44 MB)
+   [OK] Ingested (Ref Only): F3_2_Transfers_Facilities.csv (12.92 MB)
+   [OK] Ingested (Ref Only): F4_1_WasteTransfers_National.csv (0.11 MB)
+   [OK] Ingested (Ref Only): F4_2_WasteTransfers_Facilities.csv (146.43 MB)
+   [OK] Ingested (Ref Only): F5_1_LCP_Energy_Emissions_National.csv (0.13 MB)
+   [OK] Ingested (Ref Only): F5_2_LCP_Energy_Emissions.csv (56.72 MB)
+   [OK] Ingested (Ref Only): F6_1_IED_Installations.csv (304.67 MB)
+   [OK] Ingested (Ref Only): F7_1_IED_WI_coWI.csv (2.40 MB)
+
+[DONE] Manual Ingestion Complete.
+   - Added:   16
+   - Skipped: 0

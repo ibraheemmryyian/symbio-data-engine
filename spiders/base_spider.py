@@ -175,6 +175,7 @@ class BaseSpider(ABC):
             source_url=url,
             document_type=document_type,
             content_hash=content_hash,
+            file_path=str(file_path),
             metadata={
                 "domain": self.domain,
                 "file_path": str(file_path),

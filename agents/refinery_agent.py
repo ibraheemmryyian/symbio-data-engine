@@ -25,6 +25,7 @@ from typing import Optional, Generator
 
 import config
 from processors import Cleaner, Normalizer, Extractor, PDFProcessor
+from processors.gov_processor import GovProcessor
 from processors.models import ExtractionResult
 from store.postgres import (
     get_pending_documents,
@@ -70,6 +71,7 @@ class RefineryAgent:
         self.normalizer = Normalizer()
         self.extractor = Extractor()
         self.pdf_processor = PDFProcessor()
+        self.gov_processor = GovProcessor()
         
         # Statistics
         self.stats = {
@@ -151,10 +153,12 @@ class RefineryAgent:
         🛡️ STREAMING ARCHITECTURE: Yields one document at a time.
         """
         documents = get_pending_documents(limit=self.batch_size)
+        logger.info(f"DEBUG: Found {len(documents)} pending documents")
         if not documents:
             return
         
         for doc in documents:
+            logger.info(f"DEBUG: Yielding doc {doc['id']} source={doc.get('source')}")
             yield doc
     
     def _process_document(self, doc: dict):
@@ -185,9 +189,22 @@ class RefineryAgent:
                 text = self.cleaner.clean(file_path)
                 tables = []
             elif doc_type == "csv":
-                # CSV is already structured, just read it
-                text = Path(file_path).read_text(encoding="utf-8", errors="replace")
-                tables = []
+                # 🛡️ OPTIMIZED: Use GovProcessor for structured CSVs (Streams file, avoiding OOM)
+                source_type = doc.get("source", "generic")
+                results = self.gov_processor.process_csv(Path(file_path), source_type=source_type)
+                
+                # Store all results
+                for extraction in results:
+                    if extraction.is_valid:
+                        self._store_extraction(doc, extraction)
+                    else:
+                        logger.warning(f"Row failure: {extraction.rejection_reason}")
+                
+                # Mark done and return (Skip default pipeline)
+                update_document_status(doc_id, "completed")
+                self.stats["documents_processed"] += 1
+                return
+
             else:
                 text = Path(file_path).read_text(encoding="utf-8", errors="replace")
                 tables = []

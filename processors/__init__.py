@@ -10,6 +10,7 @@ from .cleaner import Cleaner, clean_text, clean_html
 from .normalizer import Normalizer, normalize_units, resolve_company
 from .extractor import Extractor, extract_structured_data
 from .pdf_processor import PDFProcessor, extract_pdf_text, extract_pdf_tables
+from .gov_processor import GovProcessor
 from .models import (
     WasteListingExtraction,
     CarbonEmissionExtraction,
@@ -49,29 +50,47 @@ def run_pipeline(
         limit=batch_size,
     )
     
+    import logging
+    logger = logging.getLogger(__name__)
+    logger.info(f"DEBUG: run_pipeline found {len(documents)} docs for source={source}")
+    
     cleaner = Cleaner()
     normalizer = Normalizer()
     extractor = Extractor()
     pdf_processor = PDFProcessor()
+    gov_processor = GovProcessor()
     
     for doc in documents:
         try:
+            logger.info(f"DEBUG: Processing doc {doc.get('id')} type={doc.get('document_type')} path={doc.get('file_path')}")
             doc_type = doc.get("document_type", "")
             
-            if doc_type == "pdf":
-                # PDF pipeline
-                text = pdf_processor.extract_text(doc["file_path"])
-                tables = pdf_processor.extract_tables(doc["file_path"])
+            if doc_type == "csv":
+                # Specialized pipeline for structured Gov data
+                source_map = {
+                    "government": "epa_tri",
+                    "gov": "epa_tri",
+                    "eprtr": "eprtr", 
+                    "mena": "generic",
+                    "bayanat": "generic",
+                    "saudi": "generic"
+                }
+                src_type = source_map.get(doc.get("source"), "epa_tri")
+                results_list = gov_processor.process_csv(doc["file_path"], source_type=src_type)
             else:
-                # HTML/text pipeline
-                text = cleaner.clean(doc["file_path"])
-                tables = []
-            
-            # Normalize
-            normalized = normalizer.normalize(text)
-            
-            # Extract structured data (MULTIPLE facts per doc)
-            results_list = extractor.extract_multiple(normalized, doc_type=doc_type)
+                # Standard Text Pipeline
+                if doc_type == "pdf":
+                    text = pdf_processor.extract_text(doc["file_path"])
+                    tables = pdf_processor.extract_tables(doc["file_path"])
+                else:
+                    text = cleaner.clean(doc["file_path"])
+                    tables = []
+                
+                # Normalize
+                normalized = normalizer.normalize(text)
+                
+                # Extract structured data
+                results_list = extractor.extract_multiple(normalized, doc_type=doc_type)
             
             # Save valid extractions to database
             from store.postgres import (
@@ -80,10 +99,15 @@ def run_pipeline(
                 insert_symbiosis_exchange
             )
             
+            logger.info(f"DEBUG: Got {len(results_list)} extraction results for doc {doc.get('id')}")
+            
             success_count = 0
             for res in results_list:
                 if res.is_valid and res.data:
                     try:
+                        # Inject document_id for source traceability
+                        res.data["document_id"] = doc["id"]
+                        
                         if res.record_type == "waste_listing":
                             insert_waste_listing(res.data)
                         elif res.record_type == "carbon_emission":
@@ -93,6 +117,7 @@ def run_pipeline(
                         success_count += 1
                     except Exception as db_err:
                         # Log DB error but continue processing other facts
+                        logger.error(f"DEBUG: DB insertion failed: {db_err}")
                         results["errors"] += 1
             
             # Update status

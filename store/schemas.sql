@@ -96,9 +96,9 @@ CREATE INDEX idx_waste_category ON waste_listings(material_category);
 CREATE INDEX idx_waste_company ON waste_listings(source_company);
 CREATE INDEX idx_waste_year ON waste_listings(year);
 
--- 🛡️ UNIQUE constraint for UPSERT support
-CREATE UNIQUE INDEX idx_waste_unique_doc_material 
-    ON waste_listings(document_id, material) 
+-- 🛡️ UNIQUE constraint for UPSERT support (Updated for CSV listings)
+CREATE UNIQUE INDEX idx_waste_listing_granular 
+    ON waste_listings(document_id, material, source_company, year, quantity_tons) 
     WHERE document_id IS NOT NULL AND material IS NOT NULL;
 
 -- ============================================

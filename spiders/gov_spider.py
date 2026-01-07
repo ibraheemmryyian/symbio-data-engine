@@ -91,16 +91,14 @@ class GovSpider(BaseSpider):
         
         The TRI provides annual CSV files with facility release data.
         """
-        # TRI Basic Data File URLs follow a pattern
-        # https://www.epa.gov/system/files/other-files/YEAR/tri_YEAR_us.csv
+        # Updated 2026: Browser-verified EPA Envirofacts API endpoint
+        # Pattern: https://data.epa.gov/efservice/downloads/tri/mv_tri_basic_download/{YEAR}_US/csv
         
         for year in source["years"]:
             if not self.should_continue():
                 return
             
-            # Note: Actual URL pattern may vary - this is a placeholder
-            # The real implementation would scrape the TRI download page
-            url = f"https://www.epa.gov/system/files/other-files/{year}/tri_{year}_us.csv"
+            url = f"https://data.epa.gov/efservice/downloads/tri/mv_tri_basic_download/{year}_US/csv"
             yield url
     
     def _get_eprtr_urls(self, source: dict) -> Generator[str, None, None]:
@@ -128,7 +126,8 @@ class GovSpider(BaseSpider):
         """
         content_type = response.headers.get("content-type", "")
         
-        if "csv" in content_type or url.endswith(".csv"):
+        # Check for CSV: content-type contains csv, OR URL ends with .csv OR /csv
+        if "csv" in content_type or url.endswith(".csv") or url.endswith("/csv"):
             return self._parse_csv(response, url)
         elif "json" in content_type:
             return self._parse_json(response, url)

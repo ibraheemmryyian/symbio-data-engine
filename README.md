@@ -1,168 +1,53 @@
-# 🏭 Symbio Data Engine
 
-**The Library of Alexandria for Industrial Symbiosis**
+# 🌍 Symbio Data Engine
+**Planetary-Scale Industrial Waste Intelligence**
 
-A comprehensive data pipeline for collecting, processing, and exporting industrial waste and symbiosis data (1978-present).
+> **License:** Proprietary (Showcase Only) | **Status:** V1.0 (Bridge Guard Verified)
 
----
+## Overview
+The Symbio Data Engine is an autonomous ETL pipeline designed to ingest, normalize, and analyze industrial waste streams at a global scale. It powers the "Symbio" platform, enabling AI-driven matchmaking between waste generators and recyclers.
 
-## 🎯 Purpose
+This repository contains the **Engine Core**—the spiders, processors, and AI training pipelines that built the dataset.
 
-1. **SymbioFlows Marketplace** — Real pricing and availability data for waste materials
-2. **SymbioTrust Verification** — Fraud detection and carbon anomaly scoring
-3. **AI Training Corpus** — 50 years of structured industrial data for LLM training
-4. **Research Database** — Historical symbiosis exchange records
+**⚠️ NOTE:** The underlying data (860,000+ records) is proprietary and is **not included** in this public repository.
 
----
+## 🏗️ Architecture
+The engine is built on a modular Python architecture:
+*   **`spiders/`**: Autonomous crawlers for scraping E-PRTR, EPA, and specialized MENA sources.
+*   **`processors/`**: Normalization logic connecting raw CSV/PDF data to the Unified Schema.
+*   **`store/`**: PostgreSQL interface with `uuid-ossp` and `pg_trgm` extensions for high-speed ingestion.
+*   **`scripts/ingestion`**: Specific ETL workflows (e.g., `prepare_training_data.py`).
+*   **`scripts/verification`**: "Bridge Guard" audit tools (e.g., `stress_test_master.py`).
 
-## 🚀 Quick Start
+## 📊 Capabilities
+This engine has successfully processed:
+*   **Volumetrics:** 860,000+ Industrial Waste Listings.
+*   **Temporal Depth:** 38 Years of Historical Data (1987-2024).
+*   **Graph Intelligence:** 1.3 Million Knowledge Graph Edges (Generator -> Material -> Treatment).
+*   **AI Readiness:** Generates fine-tuning datasets (`.jsonl`) for Llama 3 / Mistral training.
 
-### Prerequisites
+## 🛠️ Setup & Installation
+1.  **Clone the Repo:**
+    ```bash
+    git clone https://github.com/ibraheemmryyian/symbio-data-engine.git
+    cd symbio-data-engine
+    ```
+2.  **Environment:**
+    ```bash
+    cp .env.example .env
+    # Add your PostgreSQL credentials and API keys
+    ```
+3.  **Run the Pipeline:**
+    ```bash
+    # Start the "Night Watch" autonomous loop
+    python main.py process --continuous
+    ```
 
-- Python 3.11+
-- Docker & Docker Compose
-- Tesseract OCR (for PDF processing)
-
-### Installation
-
-```bash
-# Clone and enter directory
-cd symbio_data_engine
-
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Linux/Mac
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Copy environment template
-copy .env.example .env  # Windows
-cp .env.example .env    # Linux/Mac
-
-# Start databases
-docker-compose up -d
-
-# Initialize database schemas
-python main.py init
-```
-
----
-
-## 📁 Architecture
-
-```
-symbio_data_engine/
-├── spiders/              # Web crawlers
-│   ├── base_spider.py    # Common logic (rate limiting, retries)
-│   ├── wayback_spider.py # Wayback Machine (1978-2024)
-│   ├── gov_spider.py     # EPA, E-PRTR government data
-│   ├── csr_spider.py     # Corporate Sustainability Reports
-│   └── scrap_exchange_spider.py  # Real-time pricing
-├── processors/           # Data cleaning pipeline
-│   ├── cleaner.py        # HTML strip, encoding fix
-│   ├── normalizer.py     # Unit conversion, entity resolution
-│   ├── extractor.py      # LLM-powered JSON extraction
-│   └── pdf_processor.py  # OCR + table extraction
-├── store/                # Database layer
-│   ├── postgres.py       # PostgreSQL connection
-│   ├── vectors.py        # ChromaDB integration
-│   └── schemas.sql       # Table definitions
-├── exports/              # LLM training data output
-│   ├── symbioflows/
-│   ├── symbiotrust/
-│   ├── research/
-│   └── unified/
-├── agents/               # Autonomous processing
-│   └── refinery_agent.py
-├── config.py             # Configuration
-├── main.py               # CLI entry point
-└── docker-compose.yml    # Database containers
-```
+## 🛡️ Verification
+The system includes `stress_test_master.py`, a rigorous audit script that verifies:
+*   Time Travel Logic (No future dates).
+*   Mass Conservation (No negative tons).
+*   Referential Integrity (No orphan records).
 
 ---
-
-## 🔧 CLI Commands
-
-```bash
-# Ingest data from sources
-python main.py ingest symbioflows --source wayback
-python main.py ingest research --source gov --limit 1000
-
-# Process raw documents
-python main.py process --source all --batch-size 100
-
-# Export for LLM training
-python main.py export unified --format jsonl
-
-# Check pipeline status
-python main.py status --verbose
-
-# Initialize databases
-python main.py init
-```
-
----
-
-## 🗄️ Data Domains
-
-| Domain | Description | Key Tables |
-|--------|-------------|------------|
-| **SymbioFlows** | Waste marketplace data | `waste_listings` |
-| **SymbioTrust** | Carbon verification | `carbon_emissions`, `fraud_flags` |
-| **Research** | Historical symbiosis | `symbiosis_exchanges` |
-| **Unified** | Combined training corpus | All tables |
-
----
-
-## 📡 Data Sources
-
-| Source | Type | Priority |
-|--------|------|----------|
-| Kalundborg Symbiosis | Historical | 🔥 #1 |
-| EPA TRI | Government | #2 |
-| E-PRTR (Europe) | Government | #3 |
-| Corporate CSR Reports | Corporate | #4 |
-| Scrap Metal Exchanges | Real-time | #5 |
-
----
-
-## 🐳 Docker Services
-
-```bash
-# Start all services
-docker-compose up -d
-
-# Start with admin UI (for development)
-docker-compose --profile dev up -d
-
-# View logs
-docker-compose logs -f postgres
-
-# Stop services
-docker-compose down
-```
-
-**Services:**
-- PostgreSQL: `localhost:5432`
-- ChromaDB: `localhost:8000`
-- Adminer (dev): `localhost:8080`
-
----
-
-## 📊 Success Metrics
-
-| Metric | Target (Dangerous) | Target (Untouchable) |
-|--------|-------------------|---------------------|
-| Facilities | 100+ | 500+ |
-| Years | 10+ | 30+ |
-| Materials | 50+ | 100+ |
-| Transactions | 1,000+ | 10,000+ |
-| Documents | 5,000+ | 50,000+ |
-
----
-
-## 📄 License
-
-Proprietary - Symbio Technologies
+*Built by Ibraheem Mryyian. Powering the Circular Economy.*

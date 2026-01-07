@@ -81,6 +81,10 @@ class WasteListingExtraction(CitedRecord):
         max_length=50,
         description="Category: metals, plastics, organics, etc."
     )
+    treatment_method: Optional[str] = Field(
+        None,
+        description="Method of waste management: recycled, energy recovery, treatment, disposal, released"
+    )
     quantity_tons: Optional[float] = Field(
         None,
         gt=0,

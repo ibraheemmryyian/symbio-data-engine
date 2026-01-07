@@ -189,14 +189,16 @@ def insert_document(
     source_url: str,
     document_type: str,
     content_hash: str,
+    file_path: str = None,
     **kwargs,
 ) -> str:
     """Insert a new document record and return its UUID."""
     query = """
-        INSERT INTO documents (source, source_url, document_type, content_hash, metadata)
-        VALUES (%s, %s, %s, %s, %s)
+        INSERT INTO documents (source, source_url, document_type, content_hash, file_path, metadata)
+        VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (content_hash) DO UPDATE SET
             source_url = EXCLUDED.source_url,
+            file_path = COALESCE(EXCLUDED.file_path, documents.file_path),
             metadata = documents.metadata || EXCLUDED.metadata
         RETURNING id
     """
@@ -206,7 +208,7 @@ def insert_document(
     
     result = execute_query(
         query,
-        (source, source_url, document_type, content_hash, metadata),
+        (source, source_url, document_type, content_hash, file_path, metadata),
         fetch=True,
     )
     
@@ -235,8 +237,18 @@ def insert_waste_listing(data: dict) -> int:
     
     🛡️ ON CONFLICT: Updates if same document_id + material exists.
     """
-    # Filter out None values for cleaner SQL
-    data = {k: v for k, v in data.items() if v is not None}
+    # Valid columns in waste_listings table (filter out Pydantic-only fields)
+    VALID_COLUMNS = {
+        "document_id", "material", "material_category", "material_subcategory",
+        "cas_number", "quantity_tons", "quantity_unit", "price_per_ton", "currency",
+        "price_type", "source_company", "source_industry", "source_location",
+        "source_country", "quality_grade", "purity_percentage", "treatment_method",
+        "availability_status", "listing_date", "expiry_date", "extraction_confidence",
+        "data_source_url", "year", "source_quote"  # Added for Citation Rule
+    }
+    
+    # Filter out None values AND columns not in database
+    data = {k: v for k, v in data.items() if v is not None and k in VALID_COLUMNS}
     columns = list(data.keys())
     values = list(data.values())
     
@@ -248,6 +260,8 @@ def insert_waste_listing(data: dict) -> int:
         WHERE document_id IS NOT NULL AND material IS NOT NULL
         DO UPDATE SET
             quantity_tons = EXCLUDED.quantity_tons,
+            source_location = EXCLUDED.source_location,
+            source_company = EXCLUDED.source_company,
             extraction_confidence = EXCLUDED.extraction_confidence,
             created_at = NOW()
         RETURNING id
@@ -333,11 +347,12 @@ def get_pending_documents(source: str = None, limit: int = 100) -> list[dict]:
     
     🛡️ Also recovers stuck 'processing' documents older than 1 hour.
     """
+    # Base condition - wrapped in parentheses for proper AND logic with source filter
     query = """
         SELECT * FROM documents 
-        WHERE status = 'pending'
+        WHERE (status = 'pending'
            OR (status = 'processing' AND 
-               processed_at < NOW() - INTERVAL '1 hour')
+               processed_at < NOW() - INTERVAL '1 hour'))
     """
     params = []
     

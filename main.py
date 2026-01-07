@@ -21,11 +21,15 @@ from rich.logging import RichHandler
 import logging
 
 # Configure Logging to show Spider activity
+# Use basic logging for wider compatibility if Rich misbehaves in some terminals
 logging.basicConfig(
     level="INFO",
-    format="%(message)s",
-    datefmt="[%X]",
-    handlers=[RichHandler(rich_tracebacks=True, markup=True)]
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    datefmt="%H:%M:%S",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("main.log", encoding='utf-8')
+    ]
 )
 
 console = Console()
@@ -81,7 +85,7 @@ def ingest(domain: str, source: str, limit: int, dry_run: bool):
 # PROCESS COMMAND
 # ============================================
 @cli.command()
-@click.option("--source", "-s", type=click.Choice(["wayback", "gov", "csr", "scrap", "all"]), default="all")
+@click.option("--source", "-s", type=click.Choice(["wayback", "gov", "csr", "scrap", "eprtr", "mena", "all"]), default="all")
 @click.option("--reprocess", is_flag=True, help="Reprocess already processed documents")
 @click.option("--batch-size", "-b", type=int, default=100, help="Batch size for processing")
 @click.option("--continuous", "-c", is_flag=True, help="Run in continuous 'Night Mode' (loop forever)")

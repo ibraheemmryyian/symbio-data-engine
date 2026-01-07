@@ -1,73 +1,26 @@
-# Byte-compiled / optimized / DLL files
+
+# Security & Config
+.env
 __pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
+*.pyc
 venv/
-ENV/
-env/
-.venv/
-
-# IDE
 .idea/
 .vscode/
-*.swp
-*.swo
 
-# Environment variables
-.env
-.env.local
-
-# Data directories (large files)
-data/raw/
-data/processed/
-*.pdf
+# DATA PROTECTION (The Moat)
+# We ignore all raw, processed, and export data.
+# The code is public, the data is proprietary.
+data/
+exports/
 *.csv
+*.json
+*.jsonl
+*.zip
+*.txt
 
-# Database files
-*.db
-*.sqlite
-
-# Logs
-logs/
-*.log
-
-# ChromaDB persistence
-data/chroma/
-
-# Exports (generated)
-exports/symbioflows/*.jsonl
-exports/symbiotrust/*.jsonl
-exports/research/*.jsonl
-exports/unified/*.jsonl
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Test artifacts
-.pytest_cache/
-.coverage
-htmlcov/
+# Exceptions (Allow specific documentation/scripts)
+!requirements.txt
+!task.md
+!README.md
+!CERTIFICATE.md
+!scripts/

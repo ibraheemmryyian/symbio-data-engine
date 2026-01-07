@@ -9,6 +9,8 @@ from .wayback_spider import WaybackSpider
 from .gov_spider import GovSpider
 from .csr_spider import CSRSpider
 from .scrap_exchange_spider import ScrapExchangeSpider
+from .eprtr_spider import EPRTRSpider
+from .mena_spider import MENASpider
 
 
 # Spider registry for CLI
@@ -17,6 +19,8 @@ SPIDERS = {
     "gov": GovSpider,
     "csr": CSRSpider,
     "scrap": ScrapExchangeSpider,
+    "eprtr": EPRTRSpider,  # EU E-PRTR
+    "mena": MENASpider,    # UAE/Saudi
 }
 
 
