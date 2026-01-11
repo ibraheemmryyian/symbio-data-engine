@@ -7,6 +7,26 @@
 ## Overview
 The Symbio Data Engine is an autonomous ETL pipeline designed to ingest, normalize, and analyze industrial waste streams at a global scale. It powers the "Symbio" platform, enabling AI-driven matchmaking between waste generators and recyclers.
 
+## 🛡️ Security & Setup
+
+**This repository contains SOURCE CODE ONLY.**
+All proprietary data (`exports/*.csv`), pricing logic (`*.json`), and credentials (`.env`) are strictly git-ignored.
+
+### 1. Environment Setup
+Create a `.env` file in the root:
+```ini
+SUPABASE_URL=your_project_url
+SUPABASE_KEY=your_secret_key
+```
+
+### 2. Dependency Installation
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Data Ingestion
+*   Place your verified `symbio_data_engine_READY.csv` in `exports/`.
+*   Run `python ingest_to_supabase.py` to hydrate the database.
 This repository contains the **Engine Core**—the spiders, processors, and AI training pipelines that built the dataset.
 
 **⚠️ NOTE:** The underlying data (860,000+ records) is proprietary and is **not included** in this public repository.

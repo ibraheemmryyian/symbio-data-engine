@@ -1,0 +1,951 @@
+2026-01-10 14:10:11,357 - INFO - Starting FAST crawl for 488 companies...
+2026-01-10 14:10:11,361 - INFO - Scanning Bidvest -> https://www.bidvest.com/sustainability
+2026-01-10 14:10:11,365 - INFO - Scanning Grupo Bimbo -> https://grupobimbo.com/en/sustainability
+2026-01-10 14:10:11,367 - INFO - Scanning Marafiq -> https://www.marafiq.com.sa/sustainability
+2026-01-10 14:10:11,370 - INFO - Scanning Yanbu Cement -> https://www.yanbucement.com/sustainability
+2026-01-10 14:10:11,373 - INFO - Scanning Ajinomoto -> https://www.ajinomoto.com/sustainability
+2026-01-10 14:10:11,376 - INFO - Scanning Mubadala -> https://www.mubadala.com/en/sustainability
+2026-01-10 14:10:11,376 - INFO - Scanning Aqaba Container Terminal -> https://www.act.com.jo/sustainability
+2026-01-10 14:10:11,382 - INFO - Scanning Natura -> https://www.natura.com.br/sustentabilidade
+2026-01-10 14:10:11,383 - INFO - Scanning PDO -> https://www.pdo.co.om/sustainability
+2026-01-10 14:10:11,386 - INFO - Scanning Holcim -> https://www.holcim.com/sustainability
+2026-01-10 14:10:13,151 - INFO - Scanning Hankook Tire -> https://www.hankooktire.com/sustainability
+2026-01-10 14:10:13,437 - INFO - Scanning Novelis -> https://www.novelis.com/sustainability
+2026-01-10 14:10:13,463 - INFO - Scanning Toray -> https://www.toray.com/sustainability
+2026-01-10 14:10:13,849 - INFO - Scanning Bayer -> https://www.bayer.com/en/sustainability
+2026-01-10 14:10:14,055 - INFO - Scanning STC -> https://www.stc.com.sa/sustainability
+2026-01-10 14:10:14,158 - INFO - Found 1 reports for Holcim
+2026-01-10 14:10:15,621 - INFO - Scanning Apple -> https://www.apple.com/environment
+2026-01-10 14:10:16,110 - INFO - Scanning Lear Corporation -> https://www.lear.com/sustainability
+2026-01-10 14:10:16,965 - INFO - SUCCESS: Downloaded Holcim_28022025-holcim-climate-report-2024.pdf (9.76 MB)
+2026-01-10 14:10:16,967 - INFO - Scanning Novartis -> https://www.novartis.com/esg
+2026-01-10 14:10:17,242 - INFO - Scanning Nigerian Breweries -> https://www.nbplc.com/sustainability
+2026-01-10 14:10:18,690 - INFO - Found 3 reports for Novartis
+2026-01-10 14:10:19,042 - INFO - Scanning Hershey -> https://www.thehersheycompany.com/sustainability
+2026-01-10 14:10:19,167 - INFO - Found 3 reports for Apple
+2026-01-10 14:10:19,188 - INFO - Found 3 reports for Lear Corporation
+2026-01-10 14:10:19,267 - INFO - Scanning Corteva -> https://www.corteva.com/sustainability
+2026-01-10 14:10:19,292 - INFO - SUCCESS: Downloaded Novartis_novartis-q2-2025-impact-and-sustainability-update.pdf (0.73 MB)
+2026-01-10 14:10:19,566 - INFO - Found 3 reports for Novelis
+2026-01-10 14:10:19,966 - INFO - SUCCESS: Downloaded Novartis_novartis-q4-2024-impact-and-sustainability-update.pdf (0.99 MB)
+2026-01-10 14:10:20,072 - INFO - SUCCESS: Downloaded Apple_Apple_CDP-Climate-Change-Questionnaire_2024.pdf (1.48 MB)
+2026-01-10 14:10:20,188 - INFO - Found 1 reports for Hershey
+2026-01-10 14:10:20,556 - ERROR - Failed to process PDO: Page.eval_on_selector_all: Execution context was destroyed, most likely because of a navigation
+2026-01-10 14:10:20,566 - INFO - Scanning Mosaic -> https://www.mosaicco.com/sustainability
+2026-01-10 14:10:20,817 - INFO - SUCCESS: Downloaded Novartis_novartis-integrated-report-2024.pdf (4.92 MB)
+2026-01-10 14:10:20,817 - INFO - Scanning Waste Management -> https://sustainability.wm.com
+2026-01-10 14:10:20,898 - INFO - SUCCESS: Downloaded Apple_Science_aligned_Corporate_Climate_Action.pdf (2.56 MB)
+2026-01-10 14:10:20,928 - INFO - SUCCESS: Downloaded Hershey_hershey-pac-annual-report-year-end.pdf (0.18 MB)
+2026-01-10 14:10:20,928 - INFO - Scanning KIPCO -> https://www.kipco.com/sustainability
+2026-01-10 14:10:21,162 - INFO - SUCCESS: Downloaded Novelis_1-semestre-2025.pdf (0.22 MB)
+2026-01-10 14:10:21,621 - INFO - Found 3 reports for Corteva
+2026-01-10 14:10:24,019 - INFO - SUCCESS: Downloaded Lear_Corporation_2019SustainabilityReportEveryDayStrivingforBetter.pdf (16.82 MB)
+2026-01-10 14:10:27,738 - INFO - SUCCESS: Downloaded Apple_Apple_Environmental_Progress_Report_2025.pdf (21.87 MB)
+2026-01-10 14:10:27,740 - INFO - Scanning SAP -> https://www.sap.com/about/company/purpose-and-sustainability
+2026-01-10 14:10:27,850 - INFO - Found 3 reports for Waste Management
+2026-01-10 14:10:27,911 - INFO - SUCCESS: Downloaded Lear_Corporation_68a35ef0bdf1fbf221d983b6_2025%20TCFD%20Report%20Final-%202025-08-18.pdf (0.38 MB)
+2026-01-10 14:10:27,956 - INFO - SUCCESS: Downloaded Lear_Corporation_669e52f5ba0405e0ffbeb1bf_2024%20TCFD%20Report%20FNL%20-%202024-07-18.pdf (0.33 MB)
+2026-01-10 14:10:27,957 - INFO - Scanning Bank Muscat -> https://www.bankmuscat.com/sustainability
+2026-01-10 14:10:28,105 - INFO - SUCCESS: Downloaded Corteva_Corteva-CDP-Corporate-Questionnaire-2024.pdf (0.86 MB)
+2026-01-10 14:10:36,009 - INFO - SUCCESS: Downloaded Novelis_Novelis-Sustainability-Report-2023.pdf (27.74 MB)
+2026-01-10 14:10:36,142 - INFO - SUCCESS: Downloaded Corteva_Corteva-CDP-Corporate-Questionnaire-2025.pdf (0.98 MB)
+2026-01-10 14:10:36,195 - INFO - SUCCESS: Downloaded Waste_Management_WM_2025_Data_Center.pdf (1.06 MB)
+2026-01-10 14:10:36,217 - INFO - Scanning Gold Fields -> https://www.goldfields.com/sustainability
+2026-01-10 14:10:36,226 - INFO - Scanning H&M -> https://hmgroup.com/sustainability
+2026-01-10 14:10:36,923 - INFO - SUCCESS: Downloaded Waste_Management_WM_2025_Climate_Brief.pdf (5.52 MB)
+2026-01-10 14:10:36,960 - INFO - SUCCESS: Downloaded Novelis_%B0%94%E6%B1%A1%E6%9F%93%E7%89%A9%E5%92%8C%E5%9B%BA%E5%BA%9F%E6%8E%92%E6%94%BE%E6%95%B0%E6%8D%AE.pdf (0.26 MB)
+2026-01-10 14:10:36,960 - INFO - Scanning Safran -> https://www.safran-group.com/sustainability
+2026-01-10 14:10:37,933 - INFO - SUCCESS: Downloaded Waste_Management_WM_2025_Sustainability_Report.pdf (6.25 MB)
+2026-01-10 14:10:37,934 - INFO - Scanning BorgWarner -> https://www.borgwarner.com/sustainability
+2026-01-10 14:10:49,935 - INFO - SUCCESS: Downloaded Corteva_DOC-Corteva_2022_Sustainability_and_ESG_Report-Global.pdf (21.20 MB)
+2026-01-10 14:10:49,938 - INFO - Scanning Rio Tinto -> https://www.riotinto.com/sustainability
+2026-01-10 14:10:50,620 - ERROR - Failed to process Gold Fields: Page.eval_on_selector_all: Execution context was destroyed, most likely because of a navigation
+2026-01-10 14:10:51,312 - INFO - Scanning SCG -> https://www.scg.com/sustainability
+2026-01-10 14:10:52,538 - INFO - Scanning Southern Copper -> https://www.southerncoppercorp.com/sustainability
+2026-01-10 14:10:52,976 - INFO - Scanning Alibaba -> https://esg.alibabagroup.com
+2026-01-10 14:10:53,007 - INFO - Scanning PetroChina -> https://www.petrochina.com.cn/ptr/xhtml/sustainability
+2026-01-10 14:10:53,029 - INFO - Scanning SABIC -> https://www.sabic.com/en/sustainability
+2026-01-10 14:10:53,265 - INFO - Found 2 reports for KIPCO
+2026-01-10 14:10:54,966 - INFO - Scanning Nucor -> https://www.nucor.com/sustainability
+2026-01-10 14:10:55,067 - INFO - Found 3 reports for BorgWarner
+2026-01-10 14:11:00,114 - INFO - SUCCESS: Downloaded BorgWarner_original.pdf (7.81 MB)
+2026-01-10 14:11:00,116 - INFO - Scanning Chevron -> https://www.chevron.com/sustainability
+2026-01-10 14:11:01,298 - INFO - Scanning Tyson Foods -> https://www.tysonfoods.com/sustainability
+2026-01-10 14:11:01,305 - INFO - Scanning Emirates NBD -> https://www.emiratesnbd.com/en/sustainability
+2026-01-10 14:11:01,370 - INFO - Scanning Microsoft -> https://www.microsoft.com/en-us/corporate-responsibility
+2026-01-10 14:11:01,416 - INFO - Found 1 reports for SCG
+2026-01-10 14:11:01,448 - INFO - Scanning Sealed Air -> https://www.sealedair.com/sustainability
+2026-01-10 14:11:01,650 - INFO - Found 1 reports for SABIC
+2026-01-10 14:11:02,107 - INFO - Scanning HPCL -> https://www.hindustanpetroleum.com/sustainability
+2026-01-10 14:11:02,140 - INFO - Scanning Infosys -> https://www.infosys.com/sustainability
+2026-01-10 14:11:06,520 - INFO - SUCCESS: Downloaded SCG_pdf-file-1742198444.pdf (18.79 MB)
+2026-01-10 14:11:06,522 - INFO - Scanning Stora Enso -> https://www.storaenso.com/sustainability
+2026-01-10 14:11:06,705 - ERROR - Failed to process PetroChina: Page.eval_on_selector_all: Execution context was destroyed, most likely because of a navigation
+2026-01-10 14:11:07,449 - INFO - Scanning Lafarge Africa -> https://www.lafarge.com.ng/sustainability
+2026-01-10 14:11:09,501 - INFO - Scanning Bouygues -> https://www.bouygues.com/sustainability
+2026-01-10 14:11:09,721 - INFO - Scanning Petronas -> https://www.petronas.com/sustainability
+2026-01-10 14:11:12,034 - INFO - Scanning Bahrain Petroleum -> https://www.bpc.bh/sustainability
+2026-01-10 14:11:12,376 - INFO - Found 1 reports for Emirates NBD
+2026-01-10 14:11:13,550 - INFO - Scanning Anglo American -> https://www.angloamerican.com/sustainability
+2026-01-10 14:11:13,895 - INFO - Found 1 reports for Nucor
+2026-01-10 14:11:13,942 - INFO - SUCCESS: Downloaded Emirates_NBD_ScheduleofFeesandChargesOnPortfolioAccounts.pdf (0.13 MB)
+2026-01-10 14:11:13,950 - INFO - Scanning Standard Bank -> https://www.standardbank.com/sustainability
+2026-01-10 14:11:20,708 - INFO - SUCCESS: Downloaded Nucor_2024_Sustainability_Report.pdf (12.45 MB)
+2026-01-10 14:11:20,718 - INFO - Scanning Philips -> https://www.philips.com/sustainability
+2026-01-10 14:11:20,903 - INFO - Scanning Asahi Kasei -> https://www.asahi-kasei.com/sustainability
+2026-01-10 14:11:23,490 - INFO - Scanning AbbVie -> https://www.abbvie.com/responsibility
+2026-01-10 14:11:26,668 - INFO - SUCCESS: Downloaded KIPCO_KIPCO-Sustainability-Report-2024.pdf (2.05 MB)
+2026-01-10 14:11:32,887 - INFO - Scanning Marathon Petroleum -> https://www.marathonpetroleum.com/Responsibility
+2026-01-10 14:11:33,292 - ERROR - Failed to process Bahrain Petroleum: Page.eval_on_selector_all: Execution context was destroyed, most likely because of a navigation
+2026-01-10 14:11:33,343 - INFO - Scanning Eastern Company -> https://www.easternco.com/sustainability
+2026-01-10 14:11:34,597 - INFO - Scanning Arab Potash -> https://www.arabpotash.com/sustainability
+2026-01-10 14:11:36,171 - INFO - Scanning DEWA -> https://www.dewa.gov.ae/en/about-us/sustainability
+2026-01-10 14:11:36,725 - INFO - Found 2 reports for Marathon Petroleum
+2026-01-10 14:11:36,763 - INFO - Scanning Nippon Yusen -> https://www.nyk.com/english/sustainability
+2026-01-10 14:11:36,869 - INFO - Scanning Atlas Copco -> https://www.atlascopco.com/sustainability
+2026-01-10 14:11:36,998 - INFO - Found 3 reports for Petronas
+2026-01-10 14:11:37,049 - INFO - Scanning LG -> https://www.lg.com/global/sustainability
+2026-01-10 14:11:38,631 - INFO - SUCCESS: Downloaded Marathon_Petroleum_2024_SustainabilityReport.pdf (6.35 MB)
+2026-01-10 14:11:39,540 - INFO - Scanning Michelin -> https://www.michelin.com/en/sustainable-development
+2026-01-10 14:11:39,552 - INFO - Scanning Etihad Airways -> https://www.etihad.com/en/about-us/sustainability
+2026-01-10 14:11:39,608 - INFO - Scanning Etihad Rail -> https://www.etihadrail.ae/sustainability
+2026-01-10 14:11:41,998 - INFO - SUCCESS: Downloaded Marathon_Petroleum_2025-MPC-MPLX-ClimateReport.pdf (11.64 MB)
+2026-01-10 14:11:41,999 - INFO - Scanning Hyundai Steel -> https://www.hyundai-steel.com/en/sustainability
+2026-01-10 14:11:42,974 - INFO - Scanning Commercial Metals -> https://www.cmc.com/sustainability
+2026-01-10 14:11:43,061 - INFO - Scanning du Telecom -> https://www.du.ae/sustainability
+2026-01-10 14:11:43,860 - INFO - Scanning Porsche -> https://www.porsche.com/sustainability
+2026-01-10 14:11:44,140 - INFO - SUCCESS: Downloaded Petronas_PETRONAS%202023%20CDP%20Climate%20Change%20Response.pdf (0.73 MB)
+2026-01-10 14:11:44,813 - INFO - Scanning Aboitiz -> https://www.aboitiz.com/sustainability
+2026-01-10 14:11:45,066 - INFO - Scanning Veolia -> https://www.veolia.com/en/our-purpose/sustainable-development
+2026-01-10 14:11:45,205 - INFO - Found 1 reports for Michelin
+2026-01-10 14:11:45,654 - INFO - Scanning Tencent -> https://www.tencent.com/en-us/responsibility
+2026-01-10 14:11:45,873 - INFO - Found 1 reports for Nippon Yusen
+2026-01-10 14:11:46,103 - INFO - SUCCESS: Downloaded Petronas_PETRONAS-Methane-Guiding-Priciples-Reporting-2023.pdf (0.49 MB)
+2026-01-10 14:11:46,162 - INFO - Scanning Tesla -> https://www.tesla.com/impact
+2026-01-10 14:11:52,547 - INFO - SUCCESS: Downloaded Michelin_m0tiueu4lcna0lvkt39l0unt-2024-universal-registration-document.pdf (20.10 MB)
+2026-01-10 14:11:52,616 - INFO - Scanning Isuzu -> https://www.isuzu.co.jp/sustainability
+2026-01-10 14:11:52,651 - INFO - SUCCESS: Downloaded Petronas_An-eye-on-methane-2023-PETRONAS.pdf (0.28 MB)
+2026-01-10 14:11:52,673 - INFO - Scanning Sonelgaz -> https://www.sonelgaz.dz/sustainability
+2026-01-10 14:11:53,002 - INFO - SUCCESS: Downloaded KIPCO_Sustainability-report-2023-Final-28.05.2024_compressed.pdf (1.57 MB)
+2026-01-10 14:11:53,007 - INFO - Scanning Telecom Egypt -> https://www.te.eg/sustainability
+2026-01-10 14:11:53,178 - INFO - Scanning Baxter -> https://www.baxter.com/our-story/corporate-responsibility
+2026-01-10 14:11:53,366 - INFO - SUCCESS: Downloaded Nippon_Yusen_report_003en.pdf (0.04 MB)
+2026-01-10 14:11:53,399 - INFO - Scanning ADDC -> https://www.addc.ae/en/sustainability
+2026-01-10 14:11:53,432 - INFO - Scanning Emirates Global Aluminium -> https://www.ega.ae/en/sustainability
+2026-01-10 14:11:53,485 - INFO - Scanning UPL -> https://www.upl-ltd.com/sustainability
+2026-01-10 14:11:53,549 - INFO - Scanning Intel -> https://www.intel.com/content/www/us/en/corporate-responsibility
+2026-01-10 14:11:54,247 - INFO - Scanning Saudi Cement -> https://www.saudicement.com.sa/sustainability
+2026-01-10 14:11:55,153 - INFO - Scanning BHP -> https://www.bhp.com/sustainability
+2026-01-10 14:11:56,869 - INFO - Scanning Sany Heavy -> https://www.sanygroup.com/sustainability
+2026-01-10 14:11:57,660 - INFO - Found 2 reports for Intel
+2026-01-10 14:11:57,668 - INFO - Scanning AECI -> https://www.aeciworld.com/sustainability
+2026-01-10 14:11:57,689 - INFO - Scanning Mahindra -> https://www.mahindra.com/sustainability
+2026-01-10 14:11:57,785 - INFO - Scanning Zamil Industrial -> https://www.zamilsteel.com/sustainability
+2026-01-10 14:11:57,793 - INFO - Scanning Associated British Foods -> https://www.abf.co.uk/responsibility
+2026-01-10 14:11:57,881 - INFO - Scanning Hanwha -> https://www.hanwha.com/en/sustainability
+2026-01-10 14:11:58,079 - INFO - SUCCESS: Downloaded Intel_environment-climate-change-policy.pdf (0.07 MB)
+2026-01-10 14:11:58,159 - INFO - Found 3 reports for UPL
+2026-01-10 14:11:58,816 - INFO - Scanning Orsted -> https://orsted.com/en/sustainability
+2026-01-10 14:11:59,036 - INFO - Scanning Moderna -> https://www.modernatx.com/responsibility
+2026-01-10 14:11:59,279 - INFO - SUCCESS: Downloaded Intel_climate-transition-action-plan-2023.pdf (3.39 MB)
+2026-01-10 14:11:59,279 - INFO - Scanning OQ Oman -> https://oq.com/en/sustainability
+2026-01-10 14:11:59,360 - INFO - Scanning Roche -> https://www.roche.com/sustainability
+2026-01-10 14:11:59,670 - INFO - Scanning East African Breweries -> https://www.eabl.com/sustainability
+2026-01-10 14:11:59,926 - INFO - Scanning Carrefour -> https://www.carrefour.com/en/csr
+2026-01-10 14:12:00,255 - INFO - Scanning Sappi -> https://www.sappi.com/sustainability
+2026-01-10 14:12:03,650 - INFO - SUCCESS: Downloaded UPL_Sustainability-Report-2024-25.pdf (19.81 MB)
+2026-01-10 14:12:03,882 - ERROR - Failed to process Saudi Cement: Page.eval_on_selector_all: Target crashed 
+2026-01-10 14:12:03,921 - INFO - Scanning POSCO -> https://www.posco.co.kr/homepage/docs/eng6/jsp/sustainability
+2026-01-10 14:12:03,933 - INFO - Scanning British American Tobacco -> https://www.bat.com/sustainability
+2026-01-10 14:12:03,947 - INFO - Scanning SK Group -> https://www.sk.com/en/sustainability
+2026-01-10 14:12:03,996 - INFO - Scanning Aramco -> https://www.aramco.com/en/sustainability
+2026-01-10 14:12:04,221 - INFO - Found 1 reports for Carrefour
+2026-01-10 14:12:04,345 - INFO - Scanning Toshiba -> https://www.global.toshiba/sustainability
+2026-01-10 14:12:04,437 - ERROR - Failed to process Aramco: Page.eval_on_selector_all: Execution context was destroyed, most likely because of a navigation
+2026-01-10 14:12:04,473 - INFO - Scanning Magna International -> https://www.magna.com/sustainability
+2026-01-10 14:12:05,388 - INFO - SUCCESS: Downloaded Carrefour_CFR_URD_2024_EN_250328_MEL.pdf (9.61 MB)
+2026-01-10 14:12:05,388 - INFO - Scanning Albemarle -> https://www.albemarle.com/sustainability
+2026-01-10 14:12:05,455 - ERROR - Failed to process Albemarle: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,455 - INFO - Scanning Masco Corporation -> https://www.masco.com/sustainability
+2026-01-10 14:12:05,455 - ERROR - Download error for https://www.upl-ltd.com/downloads/pdf/UPL_Sustainability_Policy_for_Responsible_Care.pdf: Response has been disposed
+2026-01-10 14:12:05,455 - ERROR - Failed to process Sappi: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process Mahindra: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process Moderna: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process POSCO: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process British American Tobacco: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process SK Group: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process Toshiba: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,466 - ERROR - Failed to process Magna International: Page.eval_on_selector_all: Target page, context or browser has been closed
+2026-01-10 14:12:05,482 - ERROR - Failed to process Masco Corporation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,482 - INFO - Scanning Borouge -> https://www.borouge.com/sustainability
+2026-01-10 14:12:05,482 - ERROR - Download error for https://www.upl-ltd.com/downloads/UPL_CSR_Annual_Report_2024-25.pdf: APIRequestContext.get: Target page, context or browser has been closed
+2026-01-10 14:12:05,482 - INFO - Scanning Schlumberger -> https://www.slb.com/sustainability
+2026-01-10 14:12:05,482 - INFO - Scanning BP -> https://www.bp.com/en/global/corporate/sustainability
+2026-01-10 14:12:05,482 - INFO - Scanning Sainsburys -> https://www.about.sainsburys.co.uk/sustainability
+2026-01-10 14:12:05,482 - INFO - Scanning Shoprite -> https://www.shopriteholdings.co.za/sustainability
+2026-01-10 14:12:05,482 - INFO - Scanning Danone -> https://www.danone.com/impact
+2026-01-10 14:12:05,498 - INFO - Scanning Adani -> https://www.adani.com/sustainability
+2026-01-10 14:12:05,498 - INFO - Scanning San Miguel -> https://www.sanmiguel.com.ph/sustainability
+2026-01-10 14:12:05,502 - INFO - Scanning AstraZeneca -> https://www.astrazeneca.com/sustainability
+2026-01-10 14:12:05,504 - INFO - Scanning Mazda -> https://www.mazda.com/en/sustainability
+2026-01-10 14:12:05,506 - ERROR - Failed to process Borouge: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,506 - INFO - Scanning Thales -> https://www.thalesgroup.com/sustainability
+2026-01-10 14:12:05,508 - ERROR - Failed to process Schlumberger: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,508 - INFO - Scanning L'Oreal -> https://www.loreal.com/sustainability
+2026-01-10 14:12:05,508 - ERROR - Failed to process BP: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,510 - INFO - Scanning Nestle -> https://www.nestle.com/sustainability
+2026-01-10 14:12:05,510 - ERROR - Failed to process Sainsburys: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,510 - INFO - Scanning 3M -> https://www.3m.com/3M/en_US/sustainability-us
+2026-01-10 14:12:05,512 - ERROR - Failed to process Shoprite: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,512 - INFO - Scanning Zain Kuwait -> https://www.kw.zain.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process Danone: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning Eli Lilly -> https://www.lilly.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process Adani: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning Bunge -> https://www.bunge.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process San Miguel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning Jindal Steel -> https://www.jindalsteelpower.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process AstraZeneca: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning Panasonic -> https://holdings.panasonic/global/corporate/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process Mazda: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning Dubai Investments -> https://www.dubaiinvestments.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process Thales: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning TotalEnergies -> https://totalenergies.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process L'Oreal: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning ZF -> https://www.zf.com/sustainability
+2026-01-10 14:12:05,514 - ERROR - Failed to process Nestle: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,514 - INFO - Scanning Air Liquide -> https://www.airliquide.com/sustainable-development
+2026-01-10 14:12:05,514 - ERROR - Failed to process 3M: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Acerinox -> https://www.acerinox.com/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process Zain Kuwait: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Zain KSA -> https://www.sa.zain.com/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process Eli Lilly: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Qatar Airways -> https://www.qatarairways.com/en/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process Bunge: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Sime Darby -> https://www.simedarby.com/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process Jindal Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Martin Marietta -> https://www.martinmarietta.com/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process Panasonic: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning WestRock -> https://www.westrock.com/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process Dubai Investments: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Renault -> https://www.renaultgroup.com/en/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process TotalEnergies: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Deutsche Telekom -> https://www.telekom.com/sustainability
+2026-01-10 14:12:05,529 - ERROR - Failed to process ZF: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,529 - INFO - Scanning Valero -> https://www.valero.com/responsibility
+2026-01-10 14:12:05,529 - ERROR - Failed to process Air Liquide: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,545 - INFO - Scanning Ooredoo -> https://www.ooredoo.com/sustainability
+2026-01-10 14:12:05,545 - ERROR - Failed to process Acerinox: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,545 - INFO - Scanning Ma'aden -> https://www.maaden.com.sa/en/sustainability
+2026-01-10 14:12:05,545 - ERROR - Failed to process Zain KSA: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,545 - INFO - Scanning JD.com -> https://corporate.jd.com/sustainability
+2026-01-10 14:12:05,545 - ERROR - Failed to process Qatar Airways: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,545 - INFO - Scanning Asahi Group -> https://www.asahigroup-holdings.com/sustainability
+2026-01-10 14:12:05,545 - ERROR - Failed to process Sime Darby: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,545 - INFO - Scanning Henkel -> https://www.henkel.com/sustainability
+2026-01-10 14:12:05,545 - ERROR - Failed to process Martin Marietta: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,545 - INFO - Scanning Gilead -> https://www.gilead.com/responsibility
+2026-01-10 14:12:05,561 - ERROR - Failed to process WestRock: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Trina Solar -> https://www.trinasolar.com/sustainability
+2026-01-10 14:12:05,561 - ERROR - Failed to process Renault: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Deutsche Post DHL -> https://www.dpdhl.com/sustainability
+2026-01-10 14:12:05,561 - ERROR - Failed to process Deutsche Telekom: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Sohar Aluminium -> https://www.sohar-aluminium.com/sustainability
+2026-01-10 14:12:05,561 - ERROR - Failed to process Valero: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Hormel Foods -> https://www.hormelfoods.com/responsibility
+2026-01-10 14:12:05,561 - ERROR - Failed to process Ooredoo: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Lonza -> https://www.lonza.com/sustainability
+2026-01-10 14:12:05,561 - ERROR - Failed to process Ma'aden: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Mondelez -> https://www.mondelezinternational.com/sustainability
+2026-01-10 14:12:05,561 - ERROR - Failed to process JD.com: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,561 - INFO - Scanning Wanhua Chemical -> https://www.whchem.com/sustainability
+2026-01-10 14:12:05,577 - ERROR - Failed to process Asahi Group: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning JA Solar -> https://www.jasolar.com/sustainability
+2026-01-10 14:12:05,577 - ERROR - Failed to process Henkel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning Lanxess -> https://lanxess.com/en/sustainability
+2026-01-10 14:12:05,577 - ERROR - Failed to process Gilead: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning Bridgestone -> https://www.bridgestone.com/csr
+2026-01-10 14:12:05,577 - ERROR - Failed to process Trina Solar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning Jaguar Land Rover -> https://www.jaguarlandrover.com/sustainability
+2026-01-10 14:12:05,577 - ERROR - Failed to process Deutsche Post DHL: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning Cargill -> https://www.cargill.com/sustainability
+2026-01-10 14:12:05,577 - ERROR - Failed to process Sohar Aluminium: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning Emirates -> https://www.emirates.com/ae/english/about-us/sustainability
+2026-01-10 14:12:05,577 - ERROR - Failed to process Hormel Foods: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,577 - INFO - Scanning GPIC -> https://www.gpic.com/sustainability
+2026-01-10 14:12:05,593 - ERROR - Failed to process Lonza: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,593 - INFO - Scanning Crown Holdings -> https://www.crowncork.com/sustainability
+2026-01-10 14:12:05,593 - ERROR - Failed to process Mondelez: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,593 - INFO - Scanning China Minmetals -> https://www.minmetals.com.cn/sustainability
+2026-01-10 14:12:05,593 - ERROR - Failed to process Wanhua Chemical: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,593 - INFO - Scanning Medtronic -> https://www.medtronic.com/sustainability
+2026-01-10 14:12:05,593 - ERROR - Failed to process JA Solar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,593 - INFO - Scanning Haier -> https://www.haier.com/sustainability
+2026-01-10 14:12:05,602 - ERROR - Failed to process Lanxess: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,602 - INFO - Scanning China Resources -> https://www.crc.com.hk/en/sustainability
+2026-01-10 14:12:05,602 - ERROR - Failed to process Bridgestone: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,602 - INFO - Scanning ENOC -> https://www.enoc.com/en/sustainability
+2026-01-10 14:12:05,602 - ERROR - Failed to process Jaguar Land Rover: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,602 - INFO - Scanning Eastman -> https://www.eastman.com/en/sustainability
+2026-01-10 14:12:05,609 - ERROR - Failed to process Cargill: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning Continental -> https://www.continental.com/sustainability
+2026-01-10 14:12:05,609 - ERROR - Failed to process Emirates: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning Wacker Chemie -> https://www.wacker.com/sustainable
+2026-01-10 14:12:05,609 - ERROR - Failed to process GPIC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning Sipchem -> https://www.sipchem.com/sustainability
+2026-01-10 14:12:05,609 - ERROR - Failed to process Crown Holdings: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning Femsa -> https://www.femsa.com/en/sustainability
+2026-01-10 14:12:05,609 - ERROR - Failed to process China Minmetals: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning Procter & Gamble -> https://us.pg.com/environmental-sustainability
+2026-01-10 14:12:05,609 - ERROR - Failed to process Medtronic: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning ASML -> https://www.asml.com/sustainability
+2026-01-10 14:12:05,609 - ERROR - Failed to process Haier: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,609 - INFO - Scanning Thai Union -> https://www.thaiunion.com/sustainability
+2026-01-10 14:12:05,625 - ERROR - Failed to process China Resources: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,626 - INFO - Scanning JFE Steel -> https://www.jfe-steel.co.jp/en/sustainability
+2026-01-10 14:12:05,627 - ERROR - Failed to process ENOC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,629 - INFO - Scanning Samsung -> https://www.samsung.com/global/sustainability
+2026-01-10 14:12:05,630 - ERROR - Failed to process Eastman: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,630 - INFO - Scanning Anhui Conch -> https://www.conch.cn/sustainability
+2026-01-10 14:12:05,630 - ERROR - Failed to process Continental: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,630 - INFO - Scanning UPM -> https://www.upm.com/sustainability
+2026-01-10 14:12:05,630 - ERROR - Failed to process Wacker Chemie: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,630 - INFO - Scanning Vale -> https://www.vale.com/sustainability
+2026-01-10 14:12:05,630 - ERROR - Failed to process Sipchem: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,630 - INFO - Scanning Halliburton -> https://www.halliburton.com/sustainability
+2026-01-10 14:12:05,630 - ERROR - Failed to process Femsa: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,630 - INFO - Scanning CIB Egypt -> https://www.cibeg.com/sustainability
+2026-01-10 14:12:05,641 - ERROR - Failed to process Procter & Gamble: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning PPC -> https://www.ppc.co.za/sustainability
+2026-01-10 14:12:05,641 - ERROR - Failed to process ASML: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning CITIC -> https://www.citic.com/sustainability
+2026-01-10 14:12:05,641 - ERROR - Failed to process Thai Union: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning Unilever -> https://www.unilever.com/planet-and-society
+2026-01-10 14:12:05,641 - ERROR - Failed to process JFE Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning Rolls-Royce -> https://www.rolls-royce.com/sustainability
+2026-01-10 14:12:05,641 - ERROR - Failed to process Samsung: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning Qatar Gas -> https://www.qatargas.com/sustainability
+2026-01-10 14:12:05,641 - ERROR - Failed to process Anhui Conch: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning Bristol-Myers -> https://www.bms.com/about-us/sustainability
+2026-01-10 14:12:05,641 - ERROR - Failed to process UPM: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,641 - INFO - Scanning GSK -> https://www.gsk.com/en-gb/responsibility
+2026-01-10 14:12:05,657 - ERROR - Failed to process Vale: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Hindustan Zinc -> https://www.hzlindia.com/sustainability
+2026-01-10 14:12:05,657 - ERROR - Failed to process Halliburton: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Mercedes-Benz -> https://group.mercedes-benz.com/sustainability
+2026-01-10 14:12:05,657 - ERROR - Failed to process CIB Egypt: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Phillips 66 -> https://www.phillips66.com/responsibility
+2026-01-10 14:12:05,657 - ERROR - Failed to process PPC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Al Rajhi Bank -> https://www.alrajhibank.com.sa/sustainability
+2026-01-10 14:12:05,657 - ERROR - Failed to process CITIC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Mitsui -> https://www.mitsui.com/jp/en/sustainability
+2026-01-10 14:12:05,657 - ERROR - Failed to process Unilever: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Hyundai -> https://www.hyundai.com/worldwide/en/sustainability
+2026-01-10 14:12:05,657 - ERROR - Failed to process Rolls-Royce: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,657 - INFO - Scanning Merck -> https://www.merck.com/company-overview/esg
+2026-01-10 14:12:05,673 - ERROR - Failed to process Qatar Gas: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning MTN -> https://www.mtn.com/sustainability
+2026-01-10 14:12:05,673 - ERROR - Failed to process Bristol-Myers: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning Telkom Indonesia -> https://www.telkom.co.id/sustainability
+2026-01-10 14:12:05,673 - ERROR - Failed to process GSK: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning JBS -> https://jbs.com.br/en/sustainability
+2026-01-10 14:12:05,673 - ERROR - Failed to process Hindustan Zinc: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning Exxaro -> https://www.exxaro.com/sustainability
+2026-01-10 14:12:05,673 - ERROR - Failed to process Mercedes-Benz: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning Cleveland-Cliffs -> https://www.clevelandcliffs.com/sustainability
+2026-01-10 14:12:05,673 - ERROR - Failed to process Phillips 66: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning Kumba Iron Ore -> https://www.kumba.co.za/sustainability
+2026-01-10 14:12:05,673 - ERROR - Failed to process Al Rajhi Bank: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,673 - INFO - Scanning Senaat -> https://www.senaat.ae/sustainability
+2026-01-10 14:12:05,689 - ERROR - Failed to process Mitsui: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,689 - INFO - Scanning Givaudan -> https://www.givaudan.com/sustainability
+2026-01-10 14:12:05,689 - ERROR - Failed to process Hyundai: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,689 - INFO - Scanning Dell -> https://www.dell.com/en-us/dt/corporate/social-impact
+2026-01-10 14:12:05,696 - ERROR - Failed to process Merck: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,696 - INFO - Scanning Airbus -> https://www.airbus.com/sustainability
+2026-01-10 14:12:05,696 - ERROR - Failed to process MTN: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,696 - INFO - Scanning Singapore Airlines -> https://www.singaporeair.com/en_UK/sustainability
+2026-01-10 14:12:05,696 - ERROR - Failed to process Telkom Indonesia: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,696 - INFO - Scanning BASF -> https://www.basf.com/global/en/who-we-are/sustainability
+2026-01-10 14:12:05,702 - ERROR - Failed to process JBS: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,702 - INFO - Scanning Sasol -> https://www.sasol.com/sustainability
+2026-01-10 14:12:05,705 - ERROR - Failed to process Exxaro: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,705 - INFO - Scanning Air Products -> https://www.airproducts.com/company/sustainability
+2026-01-10 14:12:05,705 - ERROR - Failed to process Cleveland-Cliffs: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,705 - INFO - Scanning Yara -> https://www.yara.com/sustainability
+2026-01-10 14:12:05,705 - ERROR - Failed to process Kumba Iron Ore: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,710 - INFO - Scanning Dangote -> https://www.dangote.com/sustainability
+2026-01-10 14:12:05,712 - ERROR - Failed to process Senaat: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,712 - INFO - Scanning Stellantis -> https://www.stellantis.com/en/sustainability
+2026-01-10 14:12:05,714 - ERROR - Failed to process Givaudan: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,714 - INFO - Scanning Freeport-McMoRan -> https://www.fcx.com/sustainability
+2026-01-10 14:12:05,716 - ERROR - Failed to process Dell: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,716 - INFO - Scanning AGTHIA -> https://www.agthia.com/sustainability
+2026-01-10 14:12:05,718 - ERROR - Failed to process Airbus: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,718 - INFO - Scanning Reliance Industries -> https://www.ril.com/sustainability
+2026-01-10 14:12:05,720 - ERROR - Failed to process Singapore Airlines: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,721 - INFO - Scanning DSM -> https://www.dsm.com/sustainability
+2026-01-10 14:12:05,721 - ERROR - Failed to process BASF: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,721 - INFO - Scanning Yansab -> https://www.yansab.com/sustainability
+2026-01-10 14:12:05,721 - ERROR - Failed to process Sasol: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,725 - INFO - Scanning QAPCO -> https://www.qapco.com.qa/sustainability
+2026-01-10 14:12:05,727 - ERROR - Failed to process Air Products: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,727 - INFO - Scanning AB InBev -> https://www.ab-inbev.com/sustainability
+2026-01-10 14:12:05,727 - ERROR - Failed to process Yara: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,727 - INFO - Scanning Subaru -> https://www.subaru.co.jp/en/csr
+2026-01-10 14:12:05,727 - ERROR - Failed to process Dangote: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,727 - INFO - Scanning DP World -> https://www.dpworld.com/sustainability
+2026-01-10 14:12:05,727 - ERROR - Failed to process Stellantis: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,727 - INFO - Scanning Sandvik -> https://www.sandvik.com/sustainability
+2026-01-10 14:12:05,736 - ERROR - Failed to process Freeport-McMoRan: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,736 - INFO - Scanning Agility -> https://www.agility.com/sustainability
+2026-01-10 14:12:05,736 - ERROR - Failed to process AGTHIA: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,736 - INFO - Scanning Godrej -> https://www.godrej.com/sustainability
+2026-01-10 14:12:05,736 - ERROR - Failed to process Reliance Industries: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,736 - INFO - Scanning OCP Group -> https://www.ocpgroup.ma/sustainability
+2026-01-10 14:12:05,736 - ERROR - Failed to process DSM: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,736 - INFO - Scanning Asian Paints -> https://www.asianpaints.com/sustainability
+2026-01-10 14:12:05,736 - ERROR - Failed to process Yansab: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,736 - INFO - Scanning Audi -> https://www.audi.com/en/sustainability
+2026-01-10 14:12:05,736 - ERROR - Failed to process QAPCO: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,736 - INFO - Scanning Ferrovial -> https://www.ferrovial.com/sustainability
+2026-01-10 14:12:05,752 - ERROR - Failed to process AB InBev: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,752 - INFO - Scanning Alstom -> https://www.alstom.com/sustainability
+2026-01-10 14:12:05,756 - ERROR - Failed to process Subaru: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,758 - INFO - Scanning Mobily -> https://www.mobily.com.sa/sustainability
+2026-01-10 14:12:05,758 - ERROR - Failed to process DP World: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,760 - INFO - Scanning DBS Bank -> https://www.dbs.com/sustainability
+2026-01-10 14:12:05,762 - ERROR - Failed to process Sandvik: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,762 - INFO - Scanning Pernod Ricard -> https://www.pernod-ricard.com/en/sustainability
+2026-01-10 14:12:05,764 - ERROR - Failed to process Agility: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,764 - INFO - Scanning Xiaomi -> https://www.mi.com/global/sustainability
+2026-01-10 14:12:05,766 - ERROR - Failed to process Godrej: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,766 - INFO - Scanning Lenovo -> https://www.lenovo.com/sustainability
+2026-01-10 14:12:05,768 - ERROR - Failed to process OCP Group: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,768 - INFO - Scanning British Steel -> https://www.britishsteel.co.uk/sustainability
+2026-01-10 14:12:05,770 - ERROR - Failed to process Asian Paints: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,770 - INFO - Scanning Kia -> https://worldwide.kia.com/int/sustainability
+2026-01-10 14:12:05,770 - ERROR - Failed to process Audi: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,770 - INFO - Scanning Packaging Corp -> https://www.packagingcorp.com/sustainability
+2026-01-10 14:12:05,770 - ERROR - Failed to process Ferrovial: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,770 - INFO - Scanning SAFCO -> https://www.safco.com.sa/sustainability
+2026-01-10 14:12:05,770 - ERROR - Failed to process Alstom: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,770 - INFO - Scanning Fortum -> https://www.fortum.com/sustainability
+2026-01-10 14:12:05,770 - ERROR - Failed to process Mobily: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,770 - INFO - Scanning ACWA Power -> https://www.acwapower.com/sustainability
+2026-01-10 14:12:05,784 - ERROR - Failed to process DBS Bank: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,784 - INFO - Scanning CJ Group -> https://english.cj.net/sustainability
+2026-01-10 14:12:05,784 - ERROR - Failed to process Pernod Ricard: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,784 - INFO - Scanning Gulf Air -> https://www.gulfair.com/sustainability
+2026-01-10 14:12:05,789 - ERROR - Failed to process Xiaomi: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,789 - INFO - Scanning CNPC -> https://www.cnpc.com.cn/en/sustainability
+2026-01-10 14:12:05,789 - ERROR - Failed to process Lenovo: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,789 - INFO - Scanning Nippon Paper -> https://www.nipponpapergroup.com/english/csr
+2026-01-10 14:12:05,789 - ERROR - Failed to process British Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,789 - INFO - Scanning Emaar -> https://www.emaar.com/en/sustainability
+2026-01-10 14:12:05,789 - ERROR - Failed to process Kia: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,789 - INFO - Scanning Sanofi -> https://www.sanofi.com/en/our-responsibility
+2026-01-10 14:12:05,800 - ERROR - Failed to process Packaging Corp: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,800 - INFO - Scanning First Abu Dhabi Bank -> https://www.bankfab.com/sustainability
+2026-01-10 14:12:05,802 - ERROR - Failed to process SAFCO: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Clariant -> https://www.clariant.com/en/Sustainability
+2026-01-10 14:12:05,802 - ERROR - Failed to process Fortum: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Thai Oil -> https://www.thaioilgroup.com/sustainability
+2026-01-10 14:12:05,802 - ERROR - Failed to process ACWA Power: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Vulcan Materials -> https://www.vulcanmaterials.com/sustainability
+2026-01-10 14:12:05,802 - ERROR - Failed to process CJ Group: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Engie -> https://www.engie.com/en/sustainable-development
+2026-01-10 14:12:05,802 - ERROR - Failed to process Gulf Air: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Geely -> https://global.geely.com/sustainability
+2026-01-10 14:12:05,802 - ERROR - Failed to process CNPC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Almarai -> https://www.almarai.com/sustainability
+2026-01-10 14:12:05,802 - ERROR - Failed to process Nippon Paper: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,802 - INFO - Scanning Baosteel -> https://www.baosteel.com/en/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process Emaar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning Schneider Electric -> https://www.se.com/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process Sanofi: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning Owens Corning -> https://www.owenscorning.com/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process First Abu Dhabi Bank: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning PTT -> https://www.pttplc.com/en/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process Clariant: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning Qatar Petroleum -> https://www.qp.com.qa/en/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process Thai Oil: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning KCB Group -> https://www.kcbgroup.com/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process Vulcan Materials: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning Indian Oil -> https://www.iocl.com/sustainability
+2026-01-10 14:12:05,816 - ERROR - Failed to process Engie: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,816 - INFO - Scanning SNB -> https://www.alahli.com/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process Geely: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning Masdar -> https://masdar.ae/en/about-masdar/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process Almarai: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning SAIL -> https://www.sail.co.in/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process Baosteel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning Charoen Pokphand -> https://www.cpgroupglobal.com/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process Schneider Electric: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning DuPont -> https://www.dupont.com/about/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process Owens Corning: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning Glencore -> https://www.glencore.com/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process PTT: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning TASNEE -> https://www.tasnee.com/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process Qatar Petroleum: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning ACC -> https://www.acclimited.com/sustainability
+2026-01-10 14:12:05,832 - ERROR - Failed to process KCB Group: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,832 - INFO - Scanning ConocoPhillips -> https://www.conocophillips.com/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process Indian Oil: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning SK Innovation -> https://www.skinnovation.com/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process SNB: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning Iberdrola -> https://www.iberdrola.com/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process Masdar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning Canon -> https://global.canon/en/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process SAIL: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning Industries Qatar -> https://www.iq.com.qa/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process Charoen Pokphand: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning Tata Steel -> https://www.tatasteel.com/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process DuPont: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning Woolworths AU -> https://www.woolworthsgroup.com.au/sustainability
+2026-01-10 14:12:05,848 - ERROR - Failed to process Glencore: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,848 - INFO - Scanning Baker Hughes -> https://www.bakerhughes.com/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process TASNEE: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Steel Dynamics -> https://www.steeldynamics.com/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process ACC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Lotte -> https://www.lotte.co.kr/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process ConocoPhillips: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Occidental Petroleum -> https://www.oxy.com/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process SK Innovation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning TAQA -> https://www.taqa.com/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process Iberdrola: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Celanese -> https://www.celanese.com/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process Canon: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Nestle Nigeria -> https://www.nestle-cwa.com/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process Industries Qatar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Huawei -> https://www.huawei.com/en/sustainability
+2026-01-10 14:12:05,863 - ERROR - Failed to process Tata Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,863 - INFO - Scanning Electrolux -> https://www.electroluxgroup.com/sustainability
+2026-01-10 14:12:05,879 - ERROR - Failed to process Woolworths AU: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning AkzoNobel -> https://www.akzonobel.com/sustainability
+2026-01-10 14:12:05,879 - ERROR - Failed to process Baker Hughes: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning Sony -> https://www.sony.com/en/SonyInfo/csr
+2026-01-10 14:12:05,879 - ERROR - Failed to process Steel Dynamics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning Toyota -> https://global.toyota/en/sustainability
+2026-01-10 14:12:05,879 - ERROR - Failed to process Lotte: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning Golden Agri -> https://www.goldenagri.com.sg/sustainability
+2026-01-10 14:12:05,879 - ERROR - Failed to process Occidental Petroleum: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning Barrick Gold -> https://www.barrick.com/sustainability
+2026-01-10 14:12:05,879 - ERROR - Failed to process TAQA: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning Nippon Steel -> https://www.nipponsteel.com/en/csr
+2026-01-10 14:12:05,879 - ERROR - Failed to process Celanese: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,879 - INFO - Scanning Umicore -> https://www.umicore.com/sustainability
+2026-01-10 14:12:05,879 - ERROR - Failed to process Nestle Nigeria: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,895 - INFO - Scanning Coca-Cola -> https://www.coca-colacompany.com/sustainability
+2026-01-10 14:12:05,895 - ERROR - Failed to process Huawei: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,895 - INFO - Scanning Vale Oman -> https://www.vale.com/oman/sustainability
+2026-01-10 14:12:05,895 - ERROR - Failed to process Electrolux: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,895 - INFO - Scanning Shin-Etsu Chemical -> https://www.shinetsu.co.jp/en/sustainability
+2026-01-10 14:12:05,895 - ERROR - Failed to process AkzoNobel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,895 - INFO - Scanning ADNOC -> https://www.adnoc.ae/en/sustainability
+2026-01-10 14:12:05,903 - ERROR - Failed to process Sony: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,903 - INFO - Scanning LONGi Green -> https://www.longi.com/sustainability
+2026-01-10 14:12:05,903 - ERROR - Failed to process Toyota: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,903 - INFO - Scanning Suzuki -> https://www.globalsuzuki.com/sustainability
+2026-01-10 14:12:05,903 - ERROR - Failed to process Golden Agri: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,903 - INFO - Scanning YPF -> https://www.ypf.com/sustainability
+2026-01-10 14:12:05,903 - ERROR - Failed to process Barrick Gold: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,903 - INFO - Scanning Petrobras -> https://petrobras.com.br/en/society-and-environment
+2026-01-10 14:12:05,911 - ERROR - Failed to process Nippon Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning ABB -> https://global.abb/group/sustainability
+2026-01-10 14:12:05,911 - ERROR - Failed to process Umicore: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning GAIL -> https://www.gailonline.com/sustainability
+2026-01-10 14:12:05,911 - ERROR - Failed to process Coca-Cola: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning Aldar Properties -> https://www.aldar.com/en/sustainability
+2026-01-10 14:12:05,911 - ERROR - Failed to process Vale Oman: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning Berry Global -> https://www.berryglobal.com/sustainability
+2026-01-10 14:12:05,911 - ERROR - Failed to process Shin-Etsu Chemical: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning ADNOC Distribution -> https://www.adnocdistribution.ae/en/sustainability
+2026-01-10 14:12:05,911 - ERROR - Failed to process ADNOC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning Dow -> https://corporate.dow.com/en-us/esg
+2026-01-10 14:12:05,911 - ERROR - Failed to process LONGi Green: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning ExxonMobil -> https://corporate.exxonmobil.com/sustainability-and-reports
+2026-01-10 14:12:05,911 - ERROR - Failed to process Suzuki: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,911 - INFO - Scanning Egyptian Petrochemicals -> https://www.egyptianpetro.com/sustainability
+2026-01-10 14:12:05,927 - ERROR - Failed to process YPF: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,927 - INFO - Scanning FMC Corporation -> https://www.fmc.com/sustainability
+2026-01-10 14:12:05,927 - ERROR - Failed to process Petrobras: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,927 - INFO - Scanning Alba -> https://www.albasmelter.com/sustainability
+2026-01-10 14:12:05,927 - ERROR - Failed to process ABB: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,927 - INFO - Scanning Eni -> https://www.eni.com/en-IT/sustainability
+2026-01-10 14:12:05,927 - ERROR - Failed to process GAIL: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,927 - INFO - Scanning BAE Systems -> https://www.baesystems.com/sustainability
+2026-01-10 14:12:05,927 - ERROR - Failed to process Aldar Properties: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,927 - INFO - Scanning Teijin -> https://www.teijin.com/sustainability
+2026-01-10 14:12:05,927 - ERROR - Failed to process Berry Global: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,927 - INFO - Scanning Omantel -> https://www.omantel.om/sustainability
+2026-01-10 14:12:05,943 - ERROR - Failed to process ADNOC Distribution: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning KNPC -> https://www.knpc.com/sustainability
+2026-01-10 14:12:05,943 - ERROR - Failed to process Dow: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning Indorama Ventures -> https://www.indoramaventures.com/sustainability
+2026-01-10 14:12:05,943 - ERROR - Failed to process ExxonMobil: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning Komatsu -> https://www.komatsu.com/en/sustainability
+2026-01-10 14:12:05,943 - ERROR - Failed to process Egyptian Petrochemicals: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning Tiger Brands -> https://www.tigerbrands.com/sustainability
+2026-01-10 14:12:05,943 - ERROR - Failed to process FMC Corporation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning Abbott -> https://www.abbott.com/responsibility
+2026-01-10 14:12:05,943 - ERROR - Failed to process Alba: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning BPCL -> https://www.bharatpetroleum.in/sustainability
+2026-01-10 14:12:05,943 - ERROR - Failed to process Eni: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,943 - INFO - Scanning Pertamina -> https://www.pertamina.com/sustainability
+2026-01-10 14:12:05,959 - ERROR - Failed to process BAE Systems: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,959 - INFO - Scanning Hitachi -> https://www.hitachi.com/sustainability
+2026-01-10 14:12:05,963 - ERROR - Failed to process Teijin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,965 - INFO - Scanning Ecopetrol -> https://www.ecopetrol.com.co/sustainability
+2026-01-10 14:12:05,965 - ERROR - Failed to process Omantel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,965 - INFO - Scanning UltraTech -> https://www.ultratechcement.com/sustainability
+2026-01-10 14:12:05,965 - ERROR - Failed to process KNPC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,965 - INFO - Scanning Volvo -> https://www.volvogroup.com/sustainability
+2026-01-10 14:12:05,965 - ERROR - Failed to process Indorama Ventures: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,965 - INFO - Scanning Zoomlion -> https://www.zoomlion.com/sustainability
+2026-01-10 14:12:05,965 - ERROR - Failed to process Komatsu: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,965 - INFO - Scanning Hindalco -> https://www.hindalco.com/sustainability
+2026-01-10 14:12:05,965 - ERROR - Failed to process Tiger Brands: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,974 - INFO - Scanning Lufthansa -> https://www.lufthansagroup.com/sustainability
+2026-01-10 14:12:05,977 - ERROR - Failed to process Abbott: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,977 - INFO - Scanning Harmony Gold -> https://www.harmony.co.za/sustainability
+2026-01-10 14:12:05,977 - ERROR - Failed to process BPCL: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,979 - INFO - Scanning ITC Limited -> https://www.itcportal.com/sustainability
+2026-01-10 14:12:05,979 - ERROR - Failed to process Pertamina: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,979 - INFO - Scanning Equinor -> https://www.equinor.com/sustainability
+2026-01-10 14:12:05,979 - ERROR - Failed to process Hitachi: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,979 - INFO - Scanning Bamburi Cement -> https://www.bamburi.co.ke/sustainability
+2026-01-10 14:12:05,979 - ERROR - Failed to process Ecopetrol: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,979 - INFO - Scanning Petro Rabigh -> https://www.petrorabigh.com/sustainability
+2026-01-10 14:12:05,979 - ERROR - Failed to process UltraTech: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,979 - INFO - Scanning Codelco -> https://www.codelco.com/sustainability
+2026-01-10 14:12:05,979 - ERROR - Failed to process Volvo: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,979 - INFO - Scanning GM -> https://www.gm.com/commitments/sustainability
+2026-01-10 14:12:05,991 - ERROR - Failed to process Zoomlion: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,991 - INFO - Scanning Wipro -> https://www.wipro.com/sustainability
+2026-01-10 14:12:05,991 - ERROR - Failed to process Hindalco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,991 - INFO - Scanning Pfizer -> https://www.pfizer.com/about/responsibility
+2026-01-10 14:12:05,991 - ERROR - Failed to process Lufthansa: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,991 - INFO - Scanning ADM -> https://www.adm.com/sustainability
+2026-01-10 14:12:05,991 - ERROR - Failed to process Harmony Gold: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,991 - INFO - Scanning Qatar Aluminium -> https://www.qatalum.com/sustainability
+2026-01-10 14:12:05,991 - ERROR - Failed to process ITC Limited: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,991 - INFO - Scanning Nissan -> https://www.nissan-global.com/EN/SUSTAINABILITY
+2026-01-10 14:12:05,991 - ERROR - Failed to process Equinor: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:05,991 - INFO - Scanning Kuwait Finance House -> https://www.kfh.com/sustainability
+2026-01-10 14:12:06,003 - ERROR - Failed to process Bamburi Cement: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,003 - INFO - Scanning QNB -> https://www.qnb.com/sustainability
+2026-01-10 14:12:06,003 - ERROR - Failed to process Petro Rabigh: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,003 - INFO - Scanning JSW Steel -> https://www.jsw.in/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process Codelco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning DAMAC -> https://www.damacproperties.com/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process GM: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning Kinder Morgan -> https://www.kindermorgan.com/Pages/responsibility
+2026-01-10 14:12:06,006 - ERROR - Failed to process Wipro: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning Qatar Steel -> https://www.qatarsteel.com.qa/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process Pfizer: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning Mitsubishi -> https://www.mitsubishi.com/en/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process ADM: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning Solvay -> https://www.solvay.com/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process Qatar Aluminium: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning Kellogg -> https://www.kelloggcompany.com/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process Nissan: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning AngloGold Ashanti -> https://www.anglogoldashanti.com/sustainability
+2026-01-10 14:12:06,006 - ERROR - Failed to process Kuwait Finance House: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,006 - INFO - Scanning Wilmar -> https://www.wilmar-international.com/sustainability
+2026-01-10 14:12:06,022 - ERROR - Failed to process QNB: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,022 - INFO - Scanning IOI Corporation -> https://www.ioigroup.com/sustainability
+2026-01-10 14:12:06,022 - ERROR - Failed to process JSW Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,022 - INFO - Scanning Saudi Electricity -> https://www.se.com.sa/en/sustainability
+2026-01-10 14:12:06,022 - ERROR - Failed to process DAMAC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,022 - INFO - Scanning LyondellBasell -> https://www.lyondellbasell.com/sustainability
+2026-01-10 14:12:06,030 - ERROR - Failed to process Kinder Morgan: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,030 - INFO - Scanning Maroc Telecom -> https://www.iam.ma/sustainability
+2026-01-10 14:12:06,030 - ERROR - Failed to process Qatar Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,030 - INFO - Scanning Braskem -> https://www.braskem.com.br/sustainability
+2026-01-10 14:12:06,030 - ERROR - Failed to process Mitsubishi: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,030 - INFO - Scanning RWE -> https://www.rwe.com/en/sustainability
+2026-01-10 14:12:06,030 - ERROR - Failed to process Solvay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,030 - INFO - Scanning Reliance Steel -> https://www.rsac.com/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process Kellogg: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Tenaris -> https://www.tenaris.com/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process AngloGold Ashanti: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Coal India -> https://www.coalindia.in/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process Wilmar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Kraft Heinz -> https://www.kraftheinzcompany.com/responsibility
+2026-01-10 14:12:06,038 - ERROR - Failed to process IOI Corporation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Chinalco -> https://www.chinalco.com.cn/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process Saudi Electricity: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Nedbank -> https://www.nedbank.co.za/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process LyondellBasell: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Ayala Corporation -> https://www.ayala.com.ph/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process Maroc Telecom: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Sinochem -> https://www.sinochem.com/en/sustainability
+2026-01-10 14:12:06,038 - ERROR - Failed to process Braskem: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,038 - INFO - Scanning Republic Services -> https://www.republicservices.com/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process RWE: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning HeidelbergCement -> https://www.heidelbergmaterials.com/en/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Reliance Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning Sika -> https://www.sika.com/en/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Tenaris: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning Vedanta -> https://www.vedantalimited.com/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Coal India: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning Newmont -> https://www.newmont.com/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Kraft Heinz: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning NMDC -> https://www.nmdc.co.in/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Chinalco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning Covestro -> https://www.covestro.com/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Nedbank: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning E.ON -> https://www.eon.com/en/sustainability
+2026-01-10 14:12:06,054 - ERROR - Failed to process Ayala Corporation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,054 - INFO - Scanning Devon Energy -> https://www.devonenergy.com/sustainability
+2026-01-10 14:12:06,070 - ERROR - Failed to process Sinochem: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,070 - INFO - Scanning Enel -> https://www.enel.com/sustainability
+2026-01-10 14:12:06,070 - ERROR - Failed to process Republic Services: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,070 - INFO - Scanning Sonatrach -> https://www.sonatrach.com/sustainability
+2026-01-10 14:12:06,070 - ERROR - Failed to process HeidelbergCement: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,070 - INFO - Scanning Tesco -> https://www.tescoplc.com/sustainability
+2026-01-10 14:12:06,070 - ERROR - Failed to process Sika: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,070 - INFO - Scanning BYD -> https://www.byd.com/en/sustainability
+2026-01-10 14:12:06,070 - ERROR - Failed to process Vedanta: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,070 - INFO - Scanning Eagle Materials -> https://www.eaglematerials.com/sustainability
+2026-01-10 14:12:06,085 - ERROR - Failed to process Newmont: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,085 - INFO - Scanning Hydro -> https://www.hydro.com/sustainability
+2026-01-10 14:12:06,086 - ERROR - Failed to process NMDC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,086 - INFO - Scanning BUA Group -> https://www.buagroup.com/sustainability
+2026-01-10 14:12:06,086 - ERROR - Failed to process Covestro: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,090 - INFO - Scanning Oman Cement -> https://www.omancement.com/sustainability
+2026-01-10 14:12:06,090 - ERROR - Failed to process E.ON: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,090 - INFO - Scanning Suzano -> https://www.suzano.com.br/en/sustainability
+2026-01-10 14:12:06,090 - ERROR - Failed to process Devon Energy: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,090 - INFO - Scanning CEMEX -> https://www.cemex.com/sustainability
+2026-01-10 14:12:06,090 - ERROR - Failed to process Enel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,090 - INFO - Scanning Clean Harbors -> https://www.cleanharbors.com/sustainability
+2026-01-10 14:12:06,090 - ERROR - Failed to process Sonatrach: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,090 - INFO - Scanning Sumitomo -> https://www.sumitomocorp.com/en/sustainability
+2026-01-10 14:12:06,090 - ERROR - Failed to process Tesco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,090 - INFO - Scanning EDGE -> https://www.edgegroup.ae/sustainability
+2026-01-10 14:12:06,101 - ERROR - Failed to process BYD: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,101 - INFO - Scanning Sadara Chemical -> https://www.sadara.com/sustainability
+2026-01-10 14:12:06,103 - ERROR - Failed to process Eagle Materials: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,103 - INFO - Scanning BMW -> https://www.bmwgroup.com/en/sustainability
+2026-01-10 14:12:06,103 - ERROR - Failed to process Hydro: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,107 - INFO - Scanning Westlake Chemical -> https://www.westlake.com/sustainability
+2026-01-10 14:12:06,107 - ERROR - Failed to process BUA Group: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,107 - INFO - Scanning Seplat -> https://www.seplatenergy.com/sustainability
+2026-01-10 14:12:06,107 - ERROR - Failed to process Oman Cement: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,107 - INFO - Scanning Suntory -> https://www.suntory.com/csr
+2026-01-10 14:12:06,107 - ERROR - Failed to process Suzano: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,107 - INFO - Scanning CATL -> https://www.catl.com/en/sustainability
+2026-01-10 14:12:06,115 - ERROR - Failed to process CEMEX: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,115 - INFO - Scanning MTN Nigeria -> https://www.mtn.ng/sustainability
+2026-01-10 14:12:06,117 - ERROR - Failed to process Clean Harbors: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,117 - INFO - Scanning Cummins -> https://www.cummins.com/sustainability
+2026-01-10 14:12:06,117 - ERROR - Failed to process Sumitomo: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,117 - INFO - Scanning Shree Cement -> https://www.shreecement.com/sustainability
+2026-01-10 14:12:06,117 - ERROR - Failed to process EDGE: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,117 - INFO - Scanning General Mills -> https://www.generalmills.com/responsibility
+2026-01-10 14:12:06,117 - ERROR - Failed to process Sadara Chemical: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,117 - INFO - Scanning Walmart -> https://corporate.walmart.com/esgreport
+2026-01-10 14:12:06,117 - ERROR - Failed to process BMW: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,117 - INFO - Scanning EGAS -> https://www.egas.com.eg/sustainability
+2026-01-10 14:12:06,117 - ERROR - Failed to process Westlake Chemical: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,117 - INFO - Scanning Vingroup -> https://www.vingroup.net/en/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process Seplat: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,133 - INFO - Scanning Sonoco -> https://www.sonoco.com/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process Suntory: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,133 - INFO - Scanning NEC -> https://www.nec.com/en/global/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process CATL: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,133 - INFO - Scanning Ford -> https://corporate.ford.com/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process MTN Nigeria: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,133 - INFO - Scanning Impala Platinum -> https://www.implats.co.za/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process Cummins: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,133 - INFO - Scanning ONGC -> https://www.ongcindia.com/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process Shree Cement: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,133 - INFO - Scanning Paccar -> https://www.paccar.com/sustainability
+2026-01-10 14:12:06,133 - ERROR - Failed to process General Mills: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,146 - INFO - Scanning PIF -> https://www.pif.gov.sa/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process Walmart: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Diageo -> https://www.diageo.com/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process EGAS: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Doosan -> https://www.doosan.com/en/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process Vingroup: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning SAIC Motor -> https://www.saicmotor.com/english/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process Sonoco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Honda -> https://global.honda/en/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process NEC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Dubai Holding -> https://www.dubaiholding.com/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process Ford: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Julphar -> https://www.julphar.net/sustainability
+2026-01-10 14:12:06,148 - ERROR - Failed to process Impala Platinum: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Biogen -> https://www.biogen.com/responsibility
+2026-01-10 14:12:06,148 - ERROR - Failed to process ONGC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,148 - INFO - Scanning Ball Corporation -> https://www.ball.com/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process Paccar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning Taylor Wimpey -> https://www.taylorwimpey.co.uk/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process PIF: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning QEWC -> https://www.qewc.com/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process Diageo: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning Orascom Construction -> https://www.orascom.com/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process Doosan: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning LG Chem -> https://www.lgchem.com/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process SAIC Motor: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning CRRC -> https://www.crrcgc.cc/en/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process Honda: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning Saint-Gobain -> https://www.saint-gobain.com/en/sustainability
+2026-01-10 14:12:06,164 - ERROR - Failed to process Dubai Holding: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,164 - INFO - Scanning Batelco -> https://www.batelco.com/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process Julphar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning Gerdau -> https://www.gerdau.com/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process Biogen: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning Safaricom -> https://www.safaricom.co.ke/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process Ball Corporation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning Evonik -> https://corporate.evonik.com/en/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process Taylor Wimpey: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning Amazon -> https://sustainability.aboutamazon.com
+2026-01-10 14:12:06,180 - ERROR - Failed to process QEWC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning EOG Resources -> https://www.eogresources.com/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process Orascom Construction: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning Endesa -> https://www.endesa.com/en/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process LG Chem: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning Alcoa -> https://www.alcoa.com/sustainability
+2026-01-10 14:12:06,180 - ERROR - Failed to process CRRC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,180 - INFO - Scanning PIC Kuwait -> https://www.pic.com.kw/sustainability
+2026-01-10 14:12:06,196 - ERROR - Failed to process Saint-Gobain: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,196 - INFO - Scanning NBK -> https://www.nbk.com/sustainability
+2026-01-10 14:12:06,196 - ERROR - Failed to process Batelco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,196 - INFO - Scanning PPG -> https://www.ppg.com/en-US/sustainability
+2026-01-10 14:12:06,196 - ERROR - Failed to process Gerdau: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,196 - INFO - Scanning CF Industries -> https://www.cfindustries.com/sustainability
+2026-01-10 14:12:06,196 - ERROR - Failed to process Safaricom: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,196 - INFO - Scanning RAK Ceramics -> https://www.rakceramics.com/sustainability
+2026-01-10 14:12:06,203 - ERROR - Failed to process Evonik: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,203 - INFO - Scanning Shell -> https://www.shell.com/sustainability
+2026-01-10 14:12:06,203 - ERROR - Failed to process Amazon: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,203 - INFO - Scanning Vodacom -> https://www.vodacom.com/sustainability
+2026-01-10 14:12:06,203 - ERROR - Failed to process EOG Resources: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,203 - INFO - Scanning Aptiv -> https://www.aptiv.com/sustainability
+2026-01-10 14:12:06,203 - ERROR - Failed to process Endesa: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,203 - INFO - Scanning Bosch -> https://www.bosch.com/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process Alcoa: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Jinko Solar -> https://www.jinkosolar.com/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process PIC Kuwait: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Kuwait Petroleum -> https://www.kpc.com.kw/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process NBK: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Ambuja Cements -> https://www.ambujacement.com/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process PPG: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Ahold Delhaize -> https://www.aholddelhaize.com/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process CF Industries: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Zijin Mining -> https://www.zijinmining.com/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process RAK Ceramics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Amgen -> https://www.amgen.com/responsibility
+2026-01-10 14:12:06,212 - ERROR - Failed to process Shell: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Pemex -> https://www.pemex.com/en/sustainability
+2026-01-10 14:12:06,212 - ERROR - Failed to process Vodacom: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,212 - INFO - Scanning Maersk -> https://www.maersk.com/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Aptiv: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning SKF -> https://www.skf.com/group/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Bosch: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning Royal Jordanian -> https://www.rj.com/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Jinko Solar: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning Huntsman -> https://www.huntsman.com/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Kuwait Petroleum: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning Heineken -> https://www.theheinekencompany.com/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Ambuja Cements: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning PepsiCo -> https://www.pepsico.com/our-impact/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Ahold Delhaize: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning Kubota -> https://www.kubota.com/sustainability
+2026-01-10 14:12:06,227 - ERROR - Failed to process Zijin Mining: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,227 - INFO - Scanning JCB -> https://www.jcb.com/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process Amgen: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning GS -> https://www.gs.co.kr/en/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process Pemex: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning Etisalat -> https://www.etisalat.ae/en/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process Maersk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning BAPCO -> https://www.bapco.net/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process SKF: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning US Steel -> https://www.ussteel.com/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process Royal Jordanian: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning Costco -> https://www.costco.com/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process Huntsman: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning Johnson & Johnson -> https://www.jnj.com/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process Heineken: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,243 - INFO - Scanning Barloworld -> https://www.barloworld.com/sustainability
+2026-01-10 14:12:06,243 - ERROR - Failed to process PepsiCo: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning XCMG -> https://www.xcmg.com/sustainability
+2026-01-10 14:12:06,259 - ERROR - Failed to process Kubota: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Sime Darby Plantation -> https://www.simedarbyplantation.com/sustainability
+2026-01-10 14:12:06,259 - ERROR - Failed to process JCB: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Riyad Bank -> https://www.riyadbank.com/sustainability
+2026-01-10 14:12:06,259 - ERROR - Failed to process GS: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Linde -> https://www.linde.com/sustainability
+2026-01-10 14:12:06,259 - ERROR - Failed to process Etisalat: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Kirin -> https://www.kirinholdings.co.jp/english/csv
+2026-01-10 14:12:06,259 - ERROR - Failed to process BAPCO: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Managem -> https://www.managemgroup.com/sustainability
+2026-01-10 14:12:06,259 - ERROR - Failed to process US Steel: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Repsol -> https://www.repsol.com/en/sustainability
+2026-01-10 14:12:06,259 - ERROR - Failed to process Costco: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,259 - INFO - Scanning Pirelli -> https://www.pirelli.com/sustainability
+2026-01-10 14:12:06,275 - ERROR - Failed to process Johnson & Johnson: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,275 - INFO - Scanning Neste -> https://www.neste.com/sustainability
+2026-01-10 14:12:06,275 - ERROR - Failed to process Barloworld: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,275 - INFO - Scanning Fujitsu -> https://www.fujitsu.com/global/about/environment
+2026-01-10 14:12:06,275 - ERROR - Failed to process XCMG: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,275 - INFO - Scanning Sherwin-Williams -> https://sustainability.sherwin-williams.com
+2026-01-10 14:12:06,275 - ERROR - Failed to process Sime Darby Plantation: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,275 - INFO - Scanning Fonterra -> https://www.fonterra.com/nz/en/sustainability
+2026-01-10 14:12:06,275 - ERROR - Failed to process Riyad Bank: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,275 - INFO - Scanning Prysmian -> https://www.prysmiangroup.com/sustainability
+2026-01-10 14:12:06,275 - ERROR - Failed to process Linde: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,275 - INFO - Scanning Pioneer Natural -> https://www.pxd.com/sustainability
+2026-01-10 14:12:06,275 - ERROR - Failed to process Kirin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,289 - INFO - Scanning Volkswagen -> https://www.volkswagen-group.com/en/sustainability
+2026-01-10 14:12:06,289 - ERROR - Failed to process Managem: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,291 - INFO - Scanning Ganfeng Lithium -> https://www.ganfenglithium.com/sustainability
+2026-01-10 14:12:06,291 - ERROR - Failed to process Repsol: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,291 - INFO - Scanning Sinopec -> https://www.sinopec.com/en/sustainability
+2026-01-10 14:12:06,291 - ERROR - Failed to process Pirelli: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,291 - INFO - Scanning Siemens -> https://www.siemens.com/sustainability
+2026-01-10 14:12:06,291 - ERROR - Failed to process Neste: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,291 - INFO - Scanning Fortescue -> https://www.fortescue.com/sustainability
+2026-01-10 14:12:06,291 - ERROR - Failed to process Fujitsu: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,291 - INFO - Scanning Tianqi Lithium -> https://www.tianqilithium.com/sustainability
+2026-01-10 14:12:06,291 - ERROR - Failed to process Sherwin-Williams: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,291 - INFO - Scanning International Paper -> https://www.internationalpaper.com/sustainability
+2026-01-10 14:12:06,303 - ERROR - Failed to process Fonterra: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,303 - INFO - Scanning Equate -> https://www.equate.com/sustainability
+2026-01-10 14:12:06,303 - ERROR - Failed to process Prysmian: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,303 - INFO - Scanning CNOOC -> https://www.cnooc.com.cn/col/col6183
+2026-01-10 14:12:06,307 - ERROR - Failed to process Pioneer Natural: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,307 - INFO - Scanning Equity Group -> https://www.equitygroup.com/sustainability
+2026-01-10 14:12:06,307 - ERROR - Failed to process Volkswagen: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,307 - INFO - Scanning Basra Oil Company -> https://www.basraoil.com/sustainability
+2026-01-10 14:12:06,307 - ERROR - Failed to process Ganfeng Lithium: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,307 - INFO - Scanning Jiangxi Copper -> https://www.jxcc.com/sustainability
+2026-01-10 14:12:06,307 - ERROR - Failed to process Sinopec: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,307 - INFO - Scanning IKEA -> https://www.ikea.com/global/en/our-sustainability
+2026-01-10 14:12:06,307 - ERROR - Failed to process Siemens: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,307 - INFO - Scanning QatarEnergy -> https://www.qatarenergy.qa/en/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process Fortescue: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - INFO - Scanning Vinci -> https://www.vinci.com/vinci.nsf/en/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process Tianqi Lithium: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - INFO - Scanning ThyssenKrupp -> https://www.thyssenkrupp.com/en/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process International Paper: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - INFO - Scanning Sibanye-Stillwater -> https://www.sibanyestillwater.com/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process Equate: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - INFO - Scanning NTPC -> https://www.ntpc.co.in/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process CNOOC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - INFO - Scanning Samsung SDI -> https://www.samsungsdi.com/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process Equity Group: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - INFO - Scanning ADCB -> https://www.adcb.com/en/sustainability
+2026-01-10 14:12:06,323 - ERROR - Failed to process Basra Oil Company: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process Jiangxi Copper: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process IKEA: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process QatarEnergy: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process Vinci: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process ThyssenKrupp: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process Sibanye-Stillwater: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process NTPC: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,323 - ERROR - Failed to process Samsung SDI: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,338 - ERROR - Failed to process ADCB: BrowserContext.new_page: Target page, context or browser has been closed
+2026-01-10 14:12:06,340 - INFO - Crawl Complete.

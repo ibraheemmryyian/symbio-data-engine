@@ -1,0 +1,40 @@
+{
+  "started": "2026-01-09T14:33:31.220798",
+  "finished": "2026-01-09T15:18:25.176103",
+  "total_minutes": 44.9,
+  "pdfs_before": 392,
+  "pdfs_after": 414,
+  "new_pdfs": 22,
+  "results": [
+    {
+      "name": "Global CSR Spider",
+      "success": true,
+      "duration_min": 5.1,
+      "pdfs_added": 1
+    },
+    {
+      "name": "Multi-Source Spider",
+      "success": true,
+      "duration_min": 10.3,
+      "pdfs_added": 21
+    },
+    {
+      "name": "Wayback Spider",
+      "success": true,
+      "duration_min": 6.5,
+      "pdfs_added": 0
+    },
+    {
+      "name": "CSR Extraction",
+      "success": true,
+      "duration_min": 23.0,
+      "pdfs_added": 0
+    },
+    {
+      "name": "Pricing Export",
+      "success": true,
+      "duration_min": 0.0,
+      "pdfs_added": 0
+    }
+  ]
+}

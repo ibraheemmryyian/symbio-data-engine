@@ -1,97 +1,60 @@
-"""DEEP DATA QUALITY AUDIT - Is this too good to be true?"""
-from store.postgres import execute_query
+"""Audit data readiness for report generation."""
+import csv
+import json
 
 print("="*70)
-print("   🔍 DEEP DATA QUALITY AUDIT")
+print("DATA READINESS AUDIT FOR REPORT GENERATION")
 print("="*70)
 
-# 1. SAMPLE ACTUAL RECORDS
-print("\n1️⃣ SAMPLE RECORDS (Show me the data):")
-samples = execute_query("""
-    SELECT material, quantity_tons, source_company, treatment_method, year, source_location
-    FROM waste_listings 
-    WHERE quantity_tons > 0
-    ORDER BY RANDOM()
-    LIMIT 8
-""")
-for s in samples:
-    mat = s['material'][:35] if s['material'] else 'N/A'
-    qty = float(s['quantity_tons']) if s['quantity_tons'] else 0
-    comp = s['source_company'][:25] if s['source_company'] else 'N/A'
-    meth = s['treatment_method'] or 'N/A'
-    print(f"   {mat:<35} | {qty:>10.2f} MT | {meth:<18} | {s['year']}")
+# 1. Check waste listings with pricing
+print("\n[1] WASTE LISTINGS WITH PRICING")
+with open("exports/waste_listings_with_pricing.csv", "r", encoding="utf-8") as f:
+    reader = csv.DictReader(f)
+    rows = list(reader)
 
-# 2. CHECK FOR DUPLICATES
-print("\n2️⃣ DUPLICATE CHECK:")
-total = execute_query("SELECT count(*) as c FROM waste_listings")[0]['c']
-unique = execute_query("""
-    SELECT count(*) as c FROM (
-        SELECT DISTINCT material, source_company, year, treatment_method 
-        FROM waste_listings
-    ) x
-""")[0]['c']
-dup_rate = (total - unique) / total * 100 if total > 0 else 0
-print(f"   Total: {total} | Unique: {unique} | Duplicate rate: {dup_rate:.1f}%")
+print(f"Total records: {len(rows):,}")
+fields = list(rows[0].keys()) if rows else []
+print(f"Fields: {fields}")
 
-# 3. VALUE DISTRIBUTION (Are quantities realistic?)
-print("\n3️⃣ QUANTITY DISTRIBUTION:")
-dist = execute_query("""
-    SELECT 
-        CASE 
-            WHEN quantity_tons < 1 THEN '< 1 MT'
-            WHEN quantity_tons < 10 THEN '1-10 MT'
-            WHEN quantity_tons < 100 THEN '10-100 MT'
-            WHEN quantity_tons < 1000 THEN '100-1000 MT'
-            ELSE '> 1000 MT'
-        END as range,
-        count(*) as cnt
-    FROM waste_listings
-    WHERE quantity_tons > 0
-    GROUP BY 1
-    ORDER BY 2 DESC
-""")
-for d in dist:
-    print(f"   {d['range']}: {d['cnt']}")
+# Count priced vs unpriced
+priced = sum(1 for r in rows if r.get("price_per_ton") and float(r.get("price_per_ton") or 0) > 0)
+print(f"With pricing: {priced:,} ({100*priced/len(rows):.1f}%)")
+print(f"Without pricing: {len(rows) - priced:,}")
 
-# 4. TOP CHEMICALS (Are these real EPA chemicals?)
-print("\n4️⃣ TOP CHEMICALS (verify these exist in EPA TRI):")
-chems = execute_query("""
-    SELECT material, count(*) as cnt 
-    FROM waste_listings 
-    GROUP BY material 
-    ORDER BY cnt DESC 
-    LIMIT 10
-""")
-for c in chems:
-    print(f"   {c['material'][:45]}: {c['cnt']} records")
+# Check industry field
+industries = set(r.get("industry", r.get("naics_code", "unknown")) for r in rows)
+print(f"Unique industries: {len(industries)}")
 
-# 5. YEAR DISTRIBUTION
-print("\n5️⃣ YEAR DISTRIBUTION:")
-years = execute_query("""
-    SELECT year, count(*) as cnt 
-    FROM waste_listings 
-    WHERE year IS NOT NULL
-    GROUP BY year 
-    ORDER BY year
-""")
-for y in years:
-    print(f"   {y['year']}: {y['cnt']} records")
+# Check region field
+regions = set(r.get("region", r.get("state", "unknown")) for r in rows)
+print(f"Unique regions: {len(regions)}")
 
-# 6. NULL/EMPTY CHECK
-print("\n6️⃣ DATA COMPLETENESS:")
-null_mat = execute_query("SELECT count(*) as c FROM waste_listings WHERE material IS NULL OR material = ''")[0]['c']
-null_qty = execute_query("SELECT count(*) as c FROM waste_listings WHERE quantity_tons IS NULL OR quantity_tons = 0")[0]['c']
-null_meth = execute_query("SELECT count(*) as c FROM waste_listings WHERE treatment_method IS NULL")[0]['c']
-print(f"   Missing material: {null_mat}")
-print(f"   Zero/null quantity: {null_qty}")
-print(f"   Missing treatment: {null_meth}")
+# Sample row
+print("\nSample row fields:")
+for k, v in list(rows[0].items())[:20]:
+    val = str(v)[:40] + "..." if len(str(v)) > 40 else v
+    print(f"  {k}: {val}")
 
+# 2. Check CSR financial data
+print("\n[2] CSR FINANCIAL DATA")
+with open("exports/csr_financial_data.csv", "r", encoding="utf-8") as f:
+    fin = list(csv.DictReader(f))
+print(f"Total records: {len(fin)}")
+categories = set(r["category"] for r in fin)
+print(f"Categories: {categories}")
+
+# 3. Check material valuations
+print("\n[3] MATERIAL VALUATIONS")
+with open("exports/material_valuations.csv", "r", encoding="utf-8") as f:
+    vals = list(csv.DictReader(f))
+print(f"Total materials: {len(vals)}")
+if vals:
+    print(f"Fields: {list(vals[0].keys())}")
+    print("Sample:")
+    for v in vals[:5]:
+        print(f"  {v}")
+
+# 4. Summary
 print("\n" + "="*70)
-print("   VERDICT:")
-if dup_rate > 50:
-    print("   ⚠️ HIGH DUPLICATE RATE - May be over-counting")
-elif null_mat > total * 0.1:
-    print("   ⚠️ MISSING DATA - Quality issues")
-else:
-    print("   ✅ DATA LOOKS LEGITIMATE")
+print("READINESS SUMMARY")
 print("="*70)

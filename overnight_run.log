@@ -1,0 +1,11 @@
+{
+  "started": "2026-01-09T06:19:37.838660",
+  "pdfs_before": 177,
+  "pdfs_after": 392,
+  "new_pdfs": 215,
+  "results": {
+    "spider": true,
+    "extraction": true,
+    "pricing": true
+  }
+}
