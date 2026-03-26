@@ -18,9 +18,60 @@ exports/
 *.zip
 *.txt
 
+# EXPERIMENTAL & PROPRIETARY SCRIPTS
+# Kept locally, not pushed to GitHub
+phase*.py
+audit_*.py
+*_audit.py
+*_test.py
+*_debug.py
+*_check.py
+*_stats.py
+*_report.py
+*_analysis.py
+gen_*.py
+inject_*.py
+apply_*.py
+purge_*.py
+merge_*.py
+enrich_*.py
+fix_*.py
+verify_*.py
+process_*.py
+analyze_*.py
+benchmark_*.py
+recover_*.py
+download_*.py
+reprocess_*.py
+force_*.py
+hydrate_*.py
+unlock_*.py
+yield_*.py
+seed_*.py
+stress_*.py
+simulate_*.py
+demonstrate_*.py
+test_connectivity.py
+run_forever.py
+quick_*.py
+
+# Proprietary SQL scripts
+*.sql
+
+# Proprietary reports & exports
+FINAL_AUDIT_*
+SYSTEM_AUDIT_*
+Report_*.md
+MARKET_PRICING_*
+
+# Local environment & logs
+*.log
+*.pid
+*.db
+*.cache
+
 # Exceptions (Allow specific documentation/scripts)
 !requirements.txt
 !task.md
 !README.md
 !CERTIFICATE.md
-!scripts/

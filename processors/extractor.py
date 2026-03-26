@@ -104,7 +104,7 @@ class Extractor:
             self.client = httpx.Client(
                 base_url=config.LLM_BASE_URL,
                 headers={"Authorization": f"Bearer {config.LLM_API_KEY}"},
-                timeout=30.0,
+                timeout=600.0,
             )
             logger.info("LLM client initialized (temperature=0.0)")
         except Exception as e:
@@ -164,36 +164,52 @@ class Extractor:
         self,
         text: str,
         doc_type: str = None,
+        chunk_size: int = 60000,
+        overlap: int = 5000,
     ) -> list[ExtractionResult]:
         """
-        🛡️ Extract MULTIPLE facts from text, validating each individually.
+        🛡️ Extract MULTIPLE facts using a SLIDING WINDOW.
         
-        This solves the "Partial Success" problem:
-        If 5 facts are extracted but 1 fails validation, we keep the 4 valid ones.
-        
-        Args:
-            text: Cleaned text content
-            doc_type: Document type hint
-        
-        Returns:
-            List of ExtractionResults (only valid ones included)
+        Processes the entire text in overlapping chunks to ensure no data is missed
+        even in very large documents (>200 pages).
         """
         results = []
         
-        # Try LLM extraction for multiple facts
-        if self.use_llm:
-            raw_extractions = self._extract_multiple_with_llm(text)
-            
-            for raw_data in raw_extractions:
-                schema = raw_data.pop("_schema", "waste_listing")
-                result = self._validate_extraction(raw_data, text, schema)
-                
-                if result.is_valid:
-                    results.append(result)
-                else:
-                    logger.debug(f"Fact rejected: {result.rejection_reason}")
+        # 1. Chunk the text
+        chunks = []
+        if len(text) <= chunk_size:
+            chunks = [text]
+        else:
+            # Overlapping window
+            start = 0
+            while start < len(text):
+                end = start + chunk_size
+                chunks.append(text[start:end])
+                if end >= len(text):
+                    break
+                start += (chunk_size - overlap)
         
-        # If no LLM results, fall back to single rule-based extraction
+        logger.info(f"📄 Processing {len(chunks)} chunks for document.")
+
+        # 2. Process each chunk
+        for i, chunk in enumerate(chunks):
+            if self.use_llm:
+                logger.info(f"   - Processing chunk {i+1}/{len(chunks)} ({len(chunk)} chars)")
+                raw_extractions = self._extract_multiple_with_llm(chunk)
+                
+                for raw_data in raw_extractions:
+                    schema = raw_data.pop("_schema", "waste_listing")
+                    result = self._validate_extraction(raw_data, chunk, schema)
+                    
+                    if result.is_valid:
+                        # 🛡️ DEDUPLICATION: Avoid adding the same fact from overlapping chunks
+                        # We use source_quote as a simple fingerprint
+                        if not any(r.data.get("source_quote") == result.data.get("source_quote") for r in results):
+                            results.append(result)
+                    else:
+                        logger.debug(f"Fact rejected: {result.rejection_reason}")
+        
+        # 3. Fallback to rule-based if LLM found nothing
         if not results:
             single_result = self.extract(text, doc_type)
             if single_result.is_valid:
@@ -204,41 +220,37 @@ class Extractor:
     def _extract_multiple_with_llm(self, text: str) -> list[dict]:
         """
         🛡️ LLM extraction for MULTIPLE facts from a document.
-        
+
         Returns a list of raw extraction dicts, each to be validated individually.
         """
-        if not self.client:
-            return []
-        
-        prompt = f"""You are a STRICT data extraction system. Extract ALL facts from the text.
-
-🛡️ CRITICAL RULES:
-1. Extract MULTIPLE facts if present (return JSON array)
-2. Each fact MUST include "source_quote" - the EXACT sentence from text
-3. Each fact MUST include "_schema" - one of: waste_listing, carbon_emission, symbiosis_exchange
-4. Include "extraction_confidence" (0.0-1.0) for each fact
-5. NEVER infer, guess, or synthesize information
-6. If only one fact found, still return as array with single element
-
-Text to extract from:
----
-{text[:4000]}
----
-
-Return ONLY a valid JSON array of objects. No explanations.
-Example: [{{"_schema": "waste_listing", "material": "...", "source_quote": "...", "extraction_confidence": 0.9}}]"""
+        # PROPRIETARY: Extraction prompt redacted for security
+        # This prompt enforces zero-hallucination extraction with mandatory source citations
+        prompt = self._build_extraction_prompt(text)
 
         try:
-            response = self.client.post(
-                "/chat/completions",
-                json={
-                    "model": config.LLM_MODEL,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "temperature": self.LLM_TEMPERATURE,
+            # 🛡️ STATELESS REQUEST: Use a fresh client for every chunk to prevent context accumulation
+            import httpx
+            with httpx.Client(
+                base_url=config.LLM_BASE_URL,
+                headers={
+                    "Authorization": f"Bearer {config.LLM_API_KEY}",
+                    "Connection": "close" # Force socket close
                 },
-            )
+                timeout=600.0,
+            ) as client:
+                response = client.post(
+                    "/chat/completions",
+                    json={
+                        "model": config.LLM_MODEL,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "temperature": self.LLM_TEMPERATURE,
+                        "repeat_penalty": 1.15,
+                        "response_format": {"type": "json_object"},
+                    },
+                )
             
             if response.status_code != 200:
+                logger.error(f"LLM API Error: {response.status_code} - {response.text}")
                 return []
             
             data = response.json()
@@ -320,25 +332,9 @@ Example: [{{"_schema": "waste_listing", "material": "...", "source_quote": "..."
         if not self.client:
             return None
         
-        # 🛡️ ZERO HALLUCINATION PROMPT
-        prompt = f"""You are a STRICT data extraction system. Extract ONLY facts explicitly stated in the text.
-
-🛡️ CRITICAL RULES:
-1. Every extraction MUST include a "source_quote" - the EXACT sentence from the text
-2. If you cannot find an explicit quote, set the field to null
-3. Include "extraction_confidence" (0.0-1.0) based on quote clarity
-4. NEVER infer, guess, or synthesize information
-5. When in doubt, leave fields null
-
-Schema to extract:
-{json.dumps(schema, indent=2)}
-
-Text to extract from:
----
-{text[:4000]}
----
-
-Return ONLY a valid JSON object. No explanations."""
+        # PROPRIETARY: Extraction prompt redacted for security
+        # This prompt enforces zero-hallucination extraction with mandatory source citations
+        prompt = self._build_single_extraction_prompt(text, schema)
 
         try:
             response = self.client.post(
@@ -346,7 +342,9 @@ Return ONLY a valid JSON object. No explanations."""
                 json={
                     "model": config.LLM_MODEL,
                     "messages": [{"role": "user", "content": prompt}],
-                    "temperature": self.LLM_TEMPERATURE,  # 🛡️ ZERO = No hallucination
+                    "temperature": self.LLM_TEMPERATURE,
+                    "repeat_penalty": 1.15,
+                    "response_format": {"type": "json_object"},
                 },
             )
             
@@ -380,6 +378,15 @@ Return ONLY a valid JSON object. No explanations."""
             except json.JSONDecodeError:
                 pass
         
+        
+        # Try to find JSON list in text
+        json_match = re.search(r"\[[\s\S]*\]", content)
+        if json_match:
+            try:
+                return json.loads(json_match.group())
+            except json.JSONDecodeError:
+                pass
+
         # Try to find JSON object in text
         json_match = re.search(r"\{[\s\S]*\}", content)
         if json_match:
@@ -390,6 +397,20 @@ Return ONLY a valid JSON object. No explanations."""
         
         return None
     
+    def _build_extraction_prompt(self, text: str) -> str:
+        """
+        PROPRIETARY: Multi-extraction prompt template.
+        The actual prompt is kept locally and not committed to GitHub.
+        """
+        return f"[PROPRIETARY PROMPT - REDACTED]\n\nText:\n{text[:1000]}..."
+
+    def _build_single_extraction_prompt(self, text: str, schema: dict) -> str:
+        """
+        PROPRIETARY: Single-extraction prompt template.
+        The actual prompt is kept locally and not committed to GitHub.
+        """
+        return f"[PROPRIETARY PROMPT - REDACTED]\n\nSchema: {list(schema.keys())}\n\nText:\n{text[:1000]}..."
+
     def _extract_with_rules(self, text: str, schema: str) -> dict:
         """Extract using rule-based patterns (fallback)."""
         if schema == "waste_listing":
