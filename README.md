@@ -138,68 +138,12 @@ This rigorous approach ensures the training data powering SymbioFlows AI models 
 
 ## 🛡️ Security & Privacy
 
-**This repository contains SOURCE CODE ONLY.** Proprietary data, pricing algorithms, and credentials are strictly git-ignored:
+**This repository contains partially redacted SOURCE CODE ONLY.** Proprietary data, code logic, pricing algorithms, and credentials are strictly git-ignored:
 - Raw data exports (`exports/*.csv`) — Not included
 - LLM extraction logic — Not exposed
-- API credentials (`.env`) — Never committed
 - Training datasets — Served directly to SymbioFlows, not stored in public repo
 
 For the complete SymbioFlows experience (marketplace matching, pricing, symbiosis recommendations), visit **[SymbioFlows.com](https://symbioflows.com)**.
-
-## 🛠️ Setup & Installation
-
-### Prerequisites
-- Python 3.9+
-- PostgreSQL 12+ with `uuid-ossp` and `pg_trgm` extensions
-- Tesseract OCR (for PDF fallback chain)
-- LM Studio or OpenAI-compatible API endpoint
-
-### Quick Start
-
-1.  **Clone the Repo:**
-    ```bash
-    git clone https://github.com/ibraheemmryyian/symbio-data-engine.git
-    cd symbio-data-engine
-    ```
-
-2.  **Set Up Environment:**
-    ```bash
-    cp .env.example .env
-    # Edit .env with your PostgreSQL, Chroma, and LLM credentials
-    ```
-
-3.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Initialize Database:**
-    ```bash
-    python main.py init
-    ```
-
-5.  **Run the Ingestion Pipeline:**
-    ```bash
-    # Ingest EPA TRI data (limit 100 records for testing)
-    python main.py ingest all --source eprtr --limit 100
-
-    # Process documents through LLM extraction
-    python main.py process --source eprtr --batch-size 50
-
-    # Continuous processing (night mode)
-    python main.py process --continuous
-    ```
-
-6.  **Export Data:**
-    ```bash
-    python main.py export all --format jsonl
-    python main.py export all --format csv
-    ```
-
-7.  **Check Pipeline Status:**
-    ```bash
-    python main.py status
-    ```
 
 ## 🔍 Data Quality Audits
 
@@ -218,8 +162,6 @@ python tests/verify_calculations.py
 ## 🔗 Related Projects
 
 - **[SymbioFlows](https://symbioflows.com)** — The industrial symbiosis marketplace powered by this engine
-- **[SymbioTrust](https://symbioflows.com/trust)** — AI-powered verification and fraud detection
-- **Behavioral Cloning Datasets** — Fine-tuning corpora for Llama 3 / Mistral on industrial waste classification
 
 ## 📄 License & Attribution
 
