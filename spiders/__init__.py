@@ -11,6 +11,11 @@ from .csr_spider import CSRSpider
 from .scrap_exchange_spider import ScrapExchangeSpider
 from .eprtr_spider import EPRTRSpider
 from .mena_spider import MENASpider
+from .worldsteel_spider import WorldSteelSpider
+from .fao_food_spider import FAOFoodSpider
+from .plastics_exchange_spider import PlasticsExchangeSpider
+from .petcoke_spider import PetcokeSpider
+from .maritime_spider import MaritimeSpider
 
 
 # Spider registry for CLI
@@ -21,6 +26,11 @@ SPIDERS = {
     "scrap": ScrapExchangeSpider,
     "eprtr": EPRTRSpider,  # EU E-PRTR
     "mena": MENASpider,    # UAE/Saudi
+    "worldsteel": WorldSteelSpider,
+    "fao": FAOFoodSpider,
+    "plastics": PlasticsExchangeSpider,
+    "petcoke": PetcokeSpider,
+    "maritime": MaritimeSpider,
 }
 
 
@@ -72,6 +82,13 @@ __all__ = [
     "GovSpider",
     "CSRSpider",
     "ScrapExchangeSpider",
+    "EPRTRSpider",
+    "MENASpider",
+    "WorldSteelSpider",
+    "FAOFoodSpider",
+    "PlasticsExchangeSpider",
+    "PetcokeSpider",
+    "MaritimeSpider",
     "run_spider",
     "SPIDERS",
 ]
