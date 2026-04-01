@@ -9,6 +9,7 @@ Pipeline: Raw → Clean → Normalize → Extract → Store
 from .cleaner import Cleaner, clean_text, clean_html
 from .normalizer import Normalizer, normalize_units, resolve_company
 from .extractor import Extractor, extract_structured_data
+from .local_extractor import LocalExtractor
 from .pdf_processor import PDFProcessor, extract_pdf_text, extract_pdf_tables
 from .gov_processor import GovProcessor
 from .models import (
@@ -24,39 +25,43 @@ def run_pipeline(
     source: str = "all",
     reprocess: bool = False,
     batch_size: int = 100,
+    use_local_llm: bool = True,
 ) -> dict:
     """
     Run the full processing pipeline on pending documents.
-    
+
     Args:
         source: Document source to process (wayback, gov, csr, scrap, all)
         reprocess: Re-process already processed documents
         batch_size: Number of documents to process per batch
-    
+        use_local_llm: Use local LLM with regex validation (True) or cloud API (False)
+
     Returns:
         Dict with processing results
     """
     from store.postgres import get_pending_documents, update_document_status
-    
+
     results = {
         "source": source,
         "processed": 0,
         "errors": 0,
+        "extraction_method": "local_llm_with_regex" if use_local_llm else "cloud_api",
     }
-    
+
     # Get pending documents
     documents = get_pending_documents(
         source=source if source != "all" else None,
         limit=batch_size,
     )
-    
+
     import logging
     logger = logging.getLogger(__name__)
     logger.info(f"DEBUG: run_pipeline found {len(documents)} docs for source={source}")
-    
+    logger.info(f"DEBUG: Using extraction method: {results['extraction_method']}")
+
     cleaner = Cleaner()
     normalizer = Normalizer()
-    extractor = Extractor()
+    extractor = LocalExtractor() if use_local_llm else Extractor()
     pdf_processor = PDFProcessor()
     gov_processor = GovProcessor()
     
@@ -67,16 +72,24 @@ def run_pipeline(
             
             if doc_type == "csv":
                 # Specialized pipeline for structured Gov data
-                source_map = {
-                    "government": "epa_tri",
-                    "gov": "epa_tri",
-                    "eprtr": "eprtr", 
-                    "mena": "generic",
-                    "bayanat": "generic",
-                    "saudi": "generic"
-                }
-                src_type = source_map.get(doc.get("source"), "epa_tri")
-                results_list = gov_processor.process_csv(doc["file_path"], source_type=src_type)
+                source = doc.get("source", "")
+                industrial_sources = ["worldsteel", "fao", "plastics", "petcoke", "maritime"]
+
+                if source in industrial_sources:
+                    # Industrial CSV pipeline
+                    results_list = gov_processor.process_csv_industrial(doc["file_path"], source_type=source)
+                else:
+                    # Government CSV pipeline
+                    source_map = {
+                        "government": "epa_tri",
+                        "gov": "epa_tri",
+                        "eprtr": "eprtr",
+                        "mena": "generic",
+                        "bayanat": "generic",
+                        "saudi": "generic"
+                    }
+                    src_type = source_map.get(source, "epa_tri")
+                    results_list = gov_processor.process_csv(doc["file_path"], source_type=src_type)
             else:
                 # Standard Text Pipeline
                 if doc_type == "pdf":
@@ -88,10 +101,25 @@ def run_pipeline(
                 
                 # Normalize
                 normalized = normalizer.normalize(text)
-                
+
                 # Extract structured data
-                results_list = extractor.extract_multiple(normalized, doc_type=doc_type)
-            
+                try:
+                    if use_local_llm:
+                        # LocalExtractor.extract_document returns ExtractionResult objects
+                        results_list = extractor.extract_document(normalized, doc_type=doc_type, source=doc.get("source", "unknown"))
+                    else:
+                        # Cloud Extractor.extract_multiple also returns ExtractionResult objects
+                        results_list = extractor.extract_multiple(normalized, doc_type=doc_type)
+                except Exception as extract_err:
+                    logger.error(f"Extraction failed for doc {doc.get('id')}: {extract_err}", exc_info=True)
+                    update_document_status(doc["id"], "failed", f"Extraction error: {str(extract_err)[:200]}")
+                    results["errors"] += 1
+                    continue
+
+                if not isinstance(results_list, list):
+                    logger.error(f"Extractor returned non-list: {type(results_list)}")
+                    results_list = []
+
             # Save valid extractions to database
             from store.postgres import (
                 insert_waste_listing,
