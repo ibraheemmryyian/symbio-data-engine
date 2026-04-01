@@ -176,7 +176,16 @@ def init_database(reset: bool = False) -> None:
             
             cur.execute(schema_sql)
             conn.commit()
-            
+
+            # Load materials schema
+            materials_schema_file = Path(__file__).parent / "materials_schema.sql"
+            if materials_schema_file.exists():
+                with open(materials_schema_file, "r", encoding="utf-8") as f:
+                    materials_sql = f.read()
+                cur.execute(materials_sql)
+                conn.commit()
+                logger.info("Materials schema initialized")
+
     logger.info("Database initialized successfully")
 
 
@@ -244,7 +253,8 @@ def insert_waste_listing(data: dict) -> int:
         "price_type", "source_company", "source_industry", "source_location",
         "source_country", "quality_grade", "purity_percentage", "treatment_method",
         "availability_status", "listing_date", "expiry_date", "extraction_confidence",
-        "data_source_url", "year", "source_quote"  # Added for Citation Rule
+        "data_source_url", "year", "source_quote",
+        "verification_method", "source_url"
     }
     
     # Filter out None values AND columns not in database
