@@ -120,6 +120,16 @@ class WasteListingExtraction(CitedRecord):
         max_length=255,
         description="Location/address"
     )
+    source_industry: Optional[str] = Field(
+        None,
+        max_length=255,
+        description="Industry sector of the source company"
+    )
+    source_country: Optional[str] = Field(
+        None,
+        max_length=100,
+        description="Country name"
+    )
     quality_grade: Optional[str] = Field(
         None,
         pattern=r"^[A-C]$|^contaminated$",
@@ -131,6 +141,14 @@ class WasteListingExtraction(CitedRecord):
         le=MAX_YEAR,
         description="Year of listing"
     )
+    # DQ-001: verification_method is REQUIRED (Data Spec Contract)
+    verification_method: str = Field(
+        ...,  # Required field
+        min_length=3,
+        max_length=100,
+        description="Method used to verify this listing. REQUIRED per Data Spec Contract DQ-001."
+    )
+
     
     @field_validator("material")
     @classmethod
@@ -258,6 +276,118 @@ class SymbiosisExchangeExtraction(CitedRecord):
         ge=0,
         description="Estimated CO2 savings"
     )
+
+
+# ============================================
+# RESEARCH: Industrial Byproducts
+# ============================================
+class IndustrialByproductExtraction(CitedRecord):
+    """
+    Industrial byproduct extraction from World Steel, FAO, PlasticsEurope, etc.
+    """
+    material_name: str = Field(
+        ...,
+        description="e.g. 'Steel Slag', 'Food Waste Pulp'"
+    )
+    material_category: str = Field(
+        ...,
+        pattern=r"^(byproduct|waste|emission|energy|water)$",
+        description="Category of material"
+    )
+    industry: str = Field(
+        ...,
+        pattern=r"^(steel|food|plastics|oil_gas|chemical|pharma|maritime|textiles|mining)$",
+        description="Industry source"
+    )
+
+    source_company: str = Field(
+        ...,
+        min_length=2,
+        max_length=255,
+        description="Producer facility or region"
+    )
+    source_country: str = Field(
+        ...,
+        pattern=r"^[A-Z]{2}$",
+        description="ISO 3166-1 alpha-2 country code"
+    )
+    source_location: str = Field(
+        ...,
+        max_length=255,
+        description="City, port, or facility identifier"
+    )
+
+    quantity_tons: float = Field(
+        ...,
+        gt=0,
+        le=1_000_000_000,
+        description="Quantity in metric tons"
+    )
+    quantity_unit: str = Field(
+        default="metric_tons",
+        pattern=r"^(metric_tons|m3|liters|barrels)$",
+        description="Unit of measurement"
+    )
+
+    primary_receiver_industry: str = Field(
+        ...,
+        pattern=r"^(steel|food|plastics|oil_gas|chemical|pharma|maritime|textiles|mining|cement|construction|agriculture)$",
+        description="Primary industry receiving this byproduct"
+    )
+    receiver_companies: list[str] = Field(
+        default_factory=list,
+        description="Known end-use facilities"
+    )
+
+    price_per_unit: Optional[float] = Field(
+        None,
+        ge=0,
+        le=10_000,
+        description="Price per unit ($/ton or $/unit)"
+    )
+    currency: str = Field(
+        default="USD",
+        pattern=r"^[A-Z]{3}$",
+        description="ISO 4217 currency code"
+    )
+
+    environmental_impact: dict = Field(
+        default_factory=dict,
+        description="Environmental metrics: co2_kg_per_ton, water_l_per_ton, etc."
+    )
+    recyclability_score: float = Field(
+        default=0.7,
+        ge=0.0,
+        le=1.0,
+        description="Recyclability score (0-1)"
+    )
+
+    year: int = Field(
+        ...,
+        ge=MIN_YEAR,
+        le=MAX_YEAR,
+        description="Year of data collection"
+    )
+    verification_method: str = Field(
+        ...,
+        min_length=5,
+        max_length=200,
+        description="Method used to verify this record"
+    )
+
+    @field_validator("material_name")
+    @classmethod
+    def normalize_material(cls, v: str) -> str:
+        """Normalize to title case and strip whitespace."""
+        return v.strip().title()
+
+    @field_validator("source_company")
+    @classmethod
+    def validate_company(cls, v: str) -> str:
+        """Ensure company name is real and not generic."""
+        if len(v) < 2 or v.lower() in ["unknown", "tbd", "n/a"]:
+            raise ValueError("Source company must be a real facility name")
+        return v.strip()
 
 
 # ============================================
