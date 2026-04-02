@@ -287,10 +287,71 @@ def insert_waste_listing(data: dict) -> int:
             return result[0] if result else None
 
 
+def insert_industrial_byproduct(
+    document_id: str,
+    material_name: str,
+    industry: str,
+    source_company: str,
+    source_country: str,
+    source_location: str,
+    quantity_tons: float,
+    year: int,
+    price_per_unit: float = 0,
+    currency: str = "USD",
+    receiver_industry: str = None,
+    verification_method: str = "Industrial Source",
+    extraction_confidence: float = 0.85,
+) -> int:
+    """
+    Insert an industrial byproduct extraction into the database.
+
+    Returns the inserted record ID.
+    """
+    query = """
+        INSERT INTO waste_listings (
+            document_id, material, material_category, source_company,
+            source_industry, source_location, source_country,
+            quantity_tons, quantity_unit, price_per_ton, currency, year,
+            extraction_confidence, verification_method, availability_status
+        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        ON CONFLICT (document_id, material)
+        WHERE document_id IS NOT NULL AND material IS NOT NULL
+        DO UPDATE SET
+            extraction_confidence = EXCLUDED.extraction_confidence,
+            updated_at = NOW()
+        RETURNING id
+    """
+
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query,
+                (
+                    document_id,
+                    material_name,
+                    "byproduct",
+                    source_company,
+                    industry,
+                    source_location,
+                    source_country,
+                    quantity_tons,
+                    "metric_tons",
+                    price_per_unit,
+                    currency,
+                    year,
+                    extraction_confidence,
+                    verification_method,
+                    "available",
+                )
+            )
+
+            result = cur.fetchone()
+            return result[0] if result else None
+
+
 def insert_carbon_emission(data: dict) -> int:
     """
     Insert a carbon emission record with UPSERT support.
-    
+
     🛡️ ON CONFLICT: Updates if same company + year exists.
     """
     data = {k: v for k, v in data.items() if v is not None}

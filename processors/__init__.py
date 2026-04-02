@@ -124,24 +124,47 @@ def run_pipeline(
             from store.postgres import (
                 insert_waste_listing,
                 insert_carbon_emission,
-                insert_symbiosis_exchange
+                insert_symbiosis_exchange,
+                insert_industrial_byproduct,
             )
-            
+
             logger.info(f"DEBUG: Got {len(results_list)} extraction results for doc {doc.get('id')}")
-            
+
+            stats = {}
             success_count = 0
             for res in results_list:
                 if res.is_valid and res.data:
                     try:
                         # Inject document_id for source traceability
                         res.data["document_id"] = doc["id"]
-                        
+
                         if res.record_type == "waste_listing":
                             insert_waste_listing(res.data)
+                            stats["waste_listings"] = stats.get("waste_listings", 0) + 1
                         elif res.record_type == "carbon_emission":
                             insert_carbon_emission(res.data)
+                            stats["carbon_emissions"] = stats.get("carbon_emissions", 0) + 1
                         elif res.record_type == "symbiosis_exchange":
                             insert_symbiosis_exchange(res.data)
+                            stats["symbiosis_exchanges"] = stats.get("symbiosis_exchanges", 0) + 1
+                        elif res.record_type == "industrial_byproduct":
+                            rec = res.data
+                            insert_industrial_byproduct(
+                                document_id=doc["id"],
+                                material_name=rec.get("material_name"),
+                                industry=rec.get("industry"),
+                                source_company=rec.get("source_company"),
+                                source_country=rec.get("source_country"),
+                                source_location=rec.get("source_location"),
+                                quantity_tons=rec.get("quantity_tons"),
+                                year=rec.get("year"),
+                                price_per_unit=rec.get("price_per_unit", 0),
+                                currency=rec.get("currency", "USD"),
+                                receiver_industry=rec.get("primary_receiver_industry"),
+                                verification_method=rec.get("verification_method", "Industrial Source"),
+                                extraction_confidence=rec.get("extraction_confidence", 0.85),
+                            )
+                            stats["industrial_byproducts"] = stats.get("industrial_byproducts", 0) + 1
                         success_count += 1
                     except Exception as db_err:
                         # Log DB error but continue processing other facts
