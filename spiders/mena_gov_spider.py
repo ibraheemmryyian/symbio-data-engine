@@ -1,28 +1,26 @@
 
 import logging
 import json
-import asyncio
 from typing import Generator, Optional
 from datetime import datetime
 from urllib.parse import urljoin
 
 import httpx
 from bs4 import BeautifulSoup
-from playwright.async_api import async_playwright
 
 import config
 from .base_spider import BaseSpider
 
 logger = logging.getLogger(__name__)
 
-class MENASpider(BaseSpider):
+class MENAGovSpider(BaseSpider):
     """
-    Comprehensive Spider for MENA Government Open Data Portals.
+    Spider for MENA Government Open Data Portals.
     Targets Saudi Arabia, UAE, Qatar, and Oman.
     """
     
-    name = "mena"
-    source = "mena"
+    name = "mena_gov"
+    source = "government"
     
     PORTALS = {
         "saudi": {
@@ -56,11 +54,9 @@ class MENASpider(BaseSpider):
         domain: str = "symbioflows",
         limit: Optional[int] = None,
         countries: list[str] = None,
-        use_playwright: bool = True,
     ):
         super().__init__(domain=domain, limit=limit)
         self.active_portals = countries or list(self.PORTALS.keys())
-        self.use_playwright = use_playwright
 
     def get_urls(self) -> Generator[str, None, None]:
         """
@@ -78,9 +74,14 @@ class MENASpider(BaseSpider):
             elif portal["type"] == "opendatasoft":
                 yield f"{portal['api_url']}?search={portal['search_query']}&limit=100"
             else:
+                # Custom/Other - return base API for manual handling in parse
                 yield portal["api_url"]
 
     def parse(self, response: httpx.Response, url: str) -> Optional[dict]:
+        """
+        Parse API response and discover datasets.
+        """
+        # Determine which portal this is
         portal_key = None
         for key, portal in self.PORTALS.items():
             if portal["api_url"] in url:
@@ -91,24 +92,24 @@ class MENASpider(BaseSpider):
             return None
             
         portal = self.PORTALS[portal_key]
-        try:
-            data = response.json()
-        except:
-            logger.warning(f"Failed to parse JSON from {url}")
-            return None
-            
+        data = response.json()
+        
         datasets_found = 0
+        
         if portal["type"] == "ckan":
             results = data.get("result", {}).get("results", [])
             for ds in results:
                 self._handle_ckan_dataset(ds, portal_key)
                 datasets_found += 1
+                
         elif portal["type"] == "opendatasoft":
             results = data.get("datasets", [])
             for ds in results:
                 self._handle_ods_dataset(ds, portal_key)
                 datasets_found += 1
+        
         else:
+            # Handle list-based or other custom structures
             if isinstance(data, list):
                 for ds in data:
                     self._handle_custom_dataset(ds, portal_key)
@@ -118,105 +119,62 @@ class MENASpider(BaseSpider):
                     self._handle_custom_dataset(ds, portal_key)
                     datasets_found += 1
 
+        logger.info(f"Found {datasets_found} datasets for {portal['name']}")
         return {"country": portal_key, "datasets_found": datasets_found}
 
     def _handle_ckan_dataset(self, ds: dict, country: str):
+        """Process a CKAN dataset entry."""
         title = ds.get("title", "Untitled")
-        for res in ds.get("resources", []):
+        resources = ds.get("resources", [])
+        
+        for res in resources:
             url = res.get("url")
             fmt = res.get("format", "").lower()
             if url and fmt in ["csv", "xlsx", "xls", "json"]:
+                # Download and save the resource
                 self._download_resource(url, fmt, country, title)
 
     def _handle_ods_dataset(self, ds: dict, country: str):
+        """Process an OpenDataSoft dataset entry."""
         dataset_id = ds.get("dataset", {}).get("dataset_id")
         title = ds.get("dataset", {}).get("metas", {}).get("default", {}).get("title", "Untitled")
+        
         if dataset_id:
+            # ODS usually allows direct CSV export via URL pattern
             export_url = f"https://www.data.gov.qa/api/v2/catalog/datasets/{dataset_id}/exports/csv"
             self._download_resource(export_url, "csv", country, title)
 
     def _handle_custom_dataset(self, ds: dict, country: str):
+        """Handle custom/generic dataset structure."""
+        # This is a guestimate - would be refined after seeing output
         url = ds.get("url") or ds.get("download_url") or ds.get("link")
         title = ds.get("title") or ds.get("name") or "Untitled"
-        fmt = ds.get("format") or "csv"
+        fmt = ds.get("format") or ds.get("file_type") or "csv"
+        
         if url:
             self._download_resource(url, str(fmt).lower(), country, title)
 
     def _download_resource(self, url: str, fmt: str, country: str, title: str):
-        if not self.should_continue(): return
+        """Download the actual data file."""
+        if not self.should_continue():
+            return
+            
+        logger.info(f"Downloading dataset: {title} ({fmt})")
         resp = self.fetch(url)
         if resp:
             self.save_raw(
                 content=resp.content,
                 url=url,
                 document_type=fmt,
-                metadata={"country": country, "title": title, "verification_method": "government_portal"}
+                metadata={
+                    "country": country,
+                    "title": title,
+                    "year": datetime.now().year,
+                    "extraction_method": "government_api"
+                }
             )
-    async def run_playwright_discovery(self):
-        """
-        Use Playwright to discover datasets that are blocked by WAF or invisible to standard API calls.
-        """
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=True)
-            context = await browser.new_context(user_agent=self._get_user_agent())
-            page = await context.new_page()
-            
-            for country in self.active_portals:
-                portal = self.PORTALS[country]
-                logger.info(f"🌐 Playwright Discovery for {portal['name']}...")
-                
-                try:
-                    # Navigate to portal search page
-                    search_url = f"{portal['api_url'].split('/api')[0]}/dataset?q={portal['search_query']}"
-                    if portal["type"] == "opendatasoft":
-                        search_url = f"{portal['api_url'].split('/api')[0]}/explore/?q={portal['search_query']}"
-                        
-                    await page.goto(search_url, wait_until="networkidle", timeout=60000)
-                    
-                    # Scroll to load dynamic content
-                    await page.mouse.wheel(0, 2000)
-                    await asyncio.sleep(2)
-                    
-                    # Extract Dataset Links (heuristic)
-                    links = await page.eval_on_selector_all("a[href*='/dataset/'], a[href*='/explore/dataset/']", 
-                        "elements => elements.map(e => ({href: e.href, text: e.innerText}))")
-                    
-                    logger.info(f"      ✨ Found {len(links)} candidate datasets via Playwright.")
-                    
-                    for link in links[:10]: # Limit discovery per country for speed
-                        logger.info(f"      ⚙️ Inspecting {link['text']}...")
-                        # Navigate to dataset page to find downloads
-                        await page.goto(link["href"], wait_until="domcontentloaded")
-                        
-                        # Find download buttons/links for CSV/XLSX/JSON
-                        downloads = await page.eval_on_selector_all("a[href*='.csv'], a[href*='.xlsx'], a[href*='export=csv']", 
-                            "elements => elements.map(e => e.href)")
-                        
-                        for dl_url in downloads:
-                            self._download_resource(dl_url, "csv", country, link["text"])
-                            
-                except Exception as e:
-                    logger.warning(f"      ⚠️ Playwright failed for {country}: {e}")
-            
-            await browser.close()
 
-    def run(self) -> dict:
-        """
-        Override run to support async Playwright discovery if requested.
-        """
-        import asyncio
-        if self.use_playwright:
-            try:
-                # We need to run inside the existing loop if any, or create one
-                loop = asyncio.get_event_loop()
-                if loop.is_running():
-                    # This happens if called from main.py via run_spider if we don't handle it
-                    # But run_spider in __init__.py is NOT async.
-                    pass
-                else:
-                    asyncio.run(self.run_playwright_discovery())
-            except Exception as e:
-                logger.error(f"Async run failed: {e}")
-        
-        # Then call standard run for API discovery
-        return super().run()
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    spider = MENAGovSpider(limit=20)
+    spider.run()

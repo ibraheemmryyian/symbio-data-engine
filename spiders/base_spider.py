@@ -54,11 +54,12 @@ class BaseSpider(ABC):
         self.limit = limit
         self.rate_limit = rate_limit or config.SPIDER_RATE_LIMIT
         self.delay = 1.0 / self.rate_limit
-        
+        self.logger = logger
+
         self.session = self._create_session()
         self.documents_fetched = 0
         self.errors = 0
-        
+
         # Ensure data directories exist
         self.raw_dir = config.RAW_DIR / self.source
         self.raw_dir.mkdir(parents=True, exist_ok=True)

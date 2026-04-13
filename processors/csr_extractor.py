@@ -27,6 +27,8 @@ class WasteData:
     year: Optional[int] = None
     source_company: str = ""
     context: str = ""
+    verification_method: str = "CSR Verified Extraction (Regex v3.1)"  # DQ-001: REQUIRED
+
 
 
 @dataclass
@@ -84,13 +86,15 @@ class CSRExtractor:
         
         # WASTE patterns
         self.waste_patterns = [
-            r"(recycled?|disposed?|generated?|diverted?|recovered?)\s+([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt|kg)\s+(?:of\s+)?([a-zA-Z\s]+)",
-            r"([a-zA-Z]+\s*waste)\s*[:=]\s*([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt)",
-            r"([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt)\s+(?:of\s+)?([a-zA-Z\s]+)\s+(recycled?|disposed?|generated?)",
-            r"total\s+waste\s*[:=]?\s*([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt)",
-            r"waste\s+(?:to\s+)?landfill\s*[\|:]\s*([\d,]+(?:\.\d+)?)",
-            r"hazardous\s+waste\s*[\|:]\s*([\d,]+(?:\.\d+)?)",
-            r"(plastic|paper|metal|glass|organic)\s+waste\s*[:=]?\s*([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?)?",
+            r"(recycled?|disposed?|generated?|diverted?|recovered?)\s+([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt|kg)\s+(?:of\s+)?([a-zA-Z\s]{1,50})",
+            r"([a-zA-Z\s]{1,50})\s*waste\s*[:=]\s*([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt|kg)",
+            r"([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt|kg)\s+(?:of\s+)?([a-zA-Z\s]{1,50})\s+(recycled?|disposed?|generated?)",
+            r"(?:total|hazardous|industrial|organic|plastic|paper|metal|glass)\s+waste\s*[:=]?\s*([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt|kg)?",
+            r"waste\s+(?:to\s+)?landfill\s*[\|:]?\s*([\d,]+(?:\.\d+)?)",
+            r"([\d,]+(?:\.\d+)?)\s*(tonnes?|tons?|mt|kg)\s+(?:of\s+)?(?:waste|plastic|paper|metal|glass|materials?|scrap)",
+            # Summaries
+            r"Waste\s*collected\s*[:=]?\s*([\d,]+(?:\.\d+)?)",
+            r"Waste\s*prevented\s*[:=]?\s*([\d,]+(?:\.\d+)?)",
         ]
         
         # EMISSIONS patterns (CO2, GHG, scope)

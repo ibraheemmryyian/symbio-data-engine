@@ -11,6 +11,12 @@ Usage:
     python main.py status
 """
 
+import io
+import sys
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 import click
 from rich.console import Console
 from rich.table import Table
@@ -48,7 +54,7 @@ def cli():
 # ============================================
 @cli.command()
 @click.argument("domain", type=click.Choice(["symbioflows", "symbiotrust", "research", "all"]))
-@click.option("--source", "-s", type=click.Choice(["wayback", "gov", "csr", "scrap", "all"]), default="all")
+@click.option("--source", "-s", type=click.Choice(["wayback", "gov", "csr", "scrap", "mena", "eprtr", "worldsteel", "fao", "plastics", "petcoke", "maritime", "all"]), default="all")
 @click.option("--limit", "-l", type=int, default=None, help="Limit number of documents to ingest")
 @click.option("--dry-run", is_flag=True, help="Show what would be ingested without actually doing it")
 def ingest(domain: str, source: str, limit: int, dry_run: bool):
@@ -85,11 +91,12 @@ def ingest(domain: str, source: str, limit: int, dry_run: bool):
 # PROCESS COMMAND
 # ============================================
 @cli.command()
-@click.option("--source", "-s", type=click.Choice(["wayback", "gov", "csr", "scrap", "eprtr", "mena", "all"]), default="all")
+@click.option("--source", "-s", type=click.Choice(["wayback", "gov", "csr", "scrap", "eprtr", "mena", "worldsteel", "fao", "plastics", "petcoke", "maritime", "all"]), default="all")
 @click.option("--reprocess", is_flag=True, help="Reprocess already processed documents")
 @click.option("--batch-size", "-b", type=int, default=100, help="Batch size for processing")
 @click.option("--continuous", "-c", is_flag=True, help="Run in continuous 'Night Mode' (loop forever)")
-def process(source: str, reprocess: bool, batch_size: int, continuous: bool):
+@click.option("--use-cloud", is_flag=True, help="Use cloud API instead of local LLM (default: use local LLM)")
+def process(source: str, reprocess: bool, batch_size: int, continuous: bool, use_cloud: bool):
     """
     Process raw documents through the cleaning pipeline.
     
@@ -100,16 +107,17 @@ def process(source: str, reprocess: bool, batch_size: int, continuous: bool):
     console.print(Panel(
         f"[bold blue]Starting Processing Pipeline[/bold blue]\n"
         f"Source: {source}\n"
-        f"Mode: {'🌙 NIGHT MODE (Continuous)' if continuous else 'Run Once'}\n"
-        f"Batch Size: {batch_size}",
-        title="⚙️ Processor Activation"
+        f"Mode: {'Night Mode (Continuous)' if continuous else 'Run Once'}\n"
+        f"Batch Size: {batch_size}\n"
+        f"Extraction: {'Cloud API' if use_cloud else 'Local LLM + Regex'}",
+        title="Processor Activation"
     ))
     
     from processors import run_pipeline
     
     while True:
         try:
-            result = run_pipeline(source=source, reprocess=reprocess, batch_size=batch_size)
+            result = run_pipeline(source=source, reprocess=reprocess, batch_size=batch_size, use_local_llm=not use_cloud)
             
             processed = result['processed']
             if processed > 0:

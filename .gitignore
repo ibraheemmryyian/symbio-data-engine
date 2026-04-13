@@ -75,3 +75,5 @@ MARKET_PRICING_*
 !task.md
 !README.md
 !CERTIFICATE.md
+!enrich_targeted.py
+!drain_amplemarket.py

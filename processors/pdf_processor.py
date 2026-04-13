@@ -34,12 +34,16 @@ class PDFProcessor:
     def __init__(self):
         """Initialize PDF processor with available backends."""
         self.has_pypdf = self._check_pypdf()
+        self.has_pdfminer = self._check_pdfminer()
         self.has_camelot = self._check_camelot()
         self.has_tabula = self._check_tabula()
         self.has_tesseract = self._check_tesseract()
         
+        print(f"DEBUG: pypdf={self.has_pypdf}, pdfminer={self.has_pdfminer}, tesseract={self.has_tesseract}")
+        
         logger.info(
             f"PDF backends - PyPDF2: {self.has_pypdf}, "
+            f"pdfminer: {self.has_pdfminer}, "
             f"Camelot: {self.has_camelot}, "
             f"Tabula: {self.has_tabula}, "
             f"Tesseract: {self.has_tesseract}"
@@ -48,6 +52,13 @@ class PDFProcessor:
     def _check_pypdf(self) -> bool:
         try:
             import PyPDF2
+            return True
+        except ImportError:
+            return False
+            
+    def _check_pdfminer(self) -> bool:
+        try:
+            from pdfminer.high_level import extract_text
             return True
         except ImportError:
             return False
@@ -95,6 +106,12 @@ class PDFProcessor:
             text = self._extract_with_pypdf(file_path)
             if text and len(text.strip()) > 100:
                 return text
+                
+        # Try pdfminer second (often better for complex layouts)
+        if self.has_pdfminer:
+            text = self._extract_with_pdfminer(file_path)
+            if text and len(text.strip()) > 100:
+                return text
         
         # Fall back to OCR if text extraction failed
         if self.has_tesseract:
@@ -123,6 +140,16 @@ class PDFProcessor:
             
         except Exception as e:
             logger.warning(f"PyPDF2 extraction failed: {e}")
+            return ""
+
+    def _extract_with_pdfminer(self, file_path: Path) -> str:
+        """Extract text using pdfminer.six."""
+        try:
+            from pdfminer.high_level import extract_text
+            text = extract_text(str(file_path))
+            return text
+        except Exception as e:
+            logger.warning(f"pdfminer extraction failed: {e}")
             return ""
     
     def _extract_with_ocr(self, file_path: Path) -> str:
